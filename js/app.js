@@ -150,11 +150,10 @@ class XeliansHabboApp {
           <!-- Silhouette polygonale isométrique 3D du carton -->
           <polygon points="${pointsStr}" class="carton-iso-poly" style="stroke: ${b.color};" />
 
-          <!-- Arêtes internes 3D qui se rejoignent au sommet central -->
-          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[0][0]}" y2="${poly[0][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
-          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[3][0]}" y2="${poly[3][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <!-- Arêtes internes 3D isométriques qui se rejoignent au sommet central -->
           <line x1="${center[0]}" y1="${center[1]}" x2="${poly[1][0]}" y2="${poly[1][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
-          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[4][0]}" y2="${poly[4][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[5][0]}" y2="${poly[5][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[3][0]}" y2="${poly[3][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
 
           <!-- Étiquette volante Habbo stylisée -->
           <g transform="translate(${topX}, ${topY - 14})" class="carton-iso-tag">

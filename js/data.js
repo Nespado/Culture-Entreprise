@@ -28,11 +28,10 @@ window.XELIANS_DATA = {
     {
       id: "box-01",
       isoBox: {
-        // Coordonnées isométriques sur habbo.png (1672 x 941 px)
-        // Vous pouvez ajuster les sommets du contour [X, Y] ci-dessous :
-        poly: [[538, 276], [620, 316], [620, 376], [538, 416], [456, 376], [456, 316]],
-        center: [538, 356],
-        zoomOrigin: { x: 32.2, y: 36.8 }
+        // Coordonnées isométriques fidèles aux traits rouges de localisation-carton.png
+        poly: [[541, 286], [585, 308], [585, 345], [538, 367], [493, 345], [493, 308]],
+        center: [538, 330],
+        zoomOrigin: { x: 32.2, y: 34.7 }
       },
       number: "01",
       cote: "BOX-01",
@@ -129,10 +128,9 @@ window.XELIANS_DATA = {
     {
       id: "box-02",
       isoBox: {
-        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
-        poly: [[743, 194], [798, 222], [798, 268], [743, 296], [688, 268], [688, 222]],
-        center: [743, 250],
-        zoomOrigin: { x: 44.4, y: 26.6 }
+        poly: [[757, 185], [800, 206], [800, 246], [753, 267], [704, 246], [704, 206]],
+        center: [753, 227],
+        zoomOrigin: { x: 45.0, y: 24.1 }
       },
       number: "02",
       cote: "BOX-02",
@@ -267,9 +265,9 @@ window.XELIANS_DATA = {
     {
       id: "box-03",
       isoBox: {
-        poly: [[806, 384], [890, 426], [890, 484], [806, 526], [724, 484], [724, 426]],
-        center: [806, 466],
-        zoomOrigin: { x: 48.2, y: 48.4 }
+        poly: [[785, 381], [827, 402], [827, 431], [785, 452], [744, 431], [744, 402]],
+        center: [785, 423],
+        zoomOrigin: { x: 46.9, y: 44.3 }
       },
       number: "03",
       cote: "BOX-03",
@@ -348,10 +346,9 @@ window.XELIANS_DATA = {
     {
       id: "box-04",
       isoBox: {
-        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
-        poly: [[980, 444], [1024, 466], [1024, 508], [980, 530], [936, 508], [936, 466]],
-        center: [980, 488],
-        zoomOrigin: { x: 58.6, y: 51.9 }
+        poly: [[967, 446], [999, 462], [999, 491], [965, 507], [934, 491], [934, 462]],
+        center: [965, 478],
+        zoomOrigin: { x: 57.8, y: 50.7 }
       },
       number: "04",
       cote: "BOX-04",
@@ -441,10 +438,9 @@ window.XELIANS_DATA = {
     {
       id: "box-05",
       isoBox: {
-        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
-        poly: [[1076, 250], [1138, 281], [1138, 334], [1076, 365], [1014, 334], [1014, 281]],
-        center: [1076, 312],
-        zoomOrigin: { x: 64.4, y: 33.2 }
+        poly: [[1072, 244], [1112, 264], [1112, 308], [1060, 328], [1010, 308], [1010, 264]],
+        center: [1060, 284],
+        zoomOrigin: { x: 63.5, y: 30.2 }
       },
       number: "05",
       cote: "BOX-05",
@@ -517,10 +513,9 @@ window.XELIANS_DATA = {
     {
       id: "box-06",
       isoBox: {
-        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
-        poly: [[874, 722], [918, 744], [918, 796], [874, 818], [830, 796], [830, 744]],
-        center: [874, 766],
-        zoomOrigin: { x: 52.3, y: 81.4 }
+        poly: [[877, 719], [911, 736], [911, 773], [875, 790], [841, 773], [841, 736]],
+        center: [875, 753],
+        zoomOrigin: { x: 52.4, y: 80.2 }
       },
       number: "06",
       cote: "BOX-06",
@@ -596,10 +591,9 @@ window.XELIANS_DATA = {
     {
       id: "box-07",
       isoBox: {
-        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
-        poly: [[1158, 642], [1216, 672], [1216, 732], [1158, 762], [1100, 732], [1100, 672]],
-        center: [1158, 702],
-        zoomOrigin: { x: 69.3, y: 74.6 }
+        poly: [[1152, 645], [1211, 674], [1211, 712], [1160, 740], [1107, 712], [1107, 674]],
+        center: [1160, 703],
+        zoomOrigin: { x: 69.4, y: 73.6 }
       },
       number: "07",
       cote: "BOX-07",

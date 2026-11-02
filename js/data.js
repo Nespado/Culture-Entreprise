@@ -129,9 +129,10 @@ window.XELIANS_DATA = {
     {
       id: "box-02",
       isoBox: {
-        poly: [[766, 194], [820, 222], [820, 268], [766, 296], [712, 268], [712, 222]],
-        center: [766, 250],
-        zoomOrigin: { x: 45.8, y: 26.1 }
+        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
+        poly: [[743, 194], [798, 222], [798, 268], [743, 296], [688, 268], [688, 222]],
+        center: [743, 250],
+        zoomOrigin: { x: 44.4, y: 26.6 }
       },
       number: "02",
       cote: "BOX-02",
@@ -347,9 +348,10 @@ window.XELIANS_DATA = {
     {
       id: "box-04",
       isoBox: {
-        poly: [[843, 508], [900, 537], [900, 584], [843, 613], [787, 584], [787, 537]],
-        center: [843, 565],
-        zoomOrigin: { x: 50.4, y: 59.5 }
+        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
+        poly: [[980, 444], [1024, 466], [1024, 508], [980, 530], [936, 508], [936, 466]],
+        center: [980, 488],
+        zoomOrigin: { x: 58.6, y: 51.9 }
       },
       number: "04",
       cote: "BOX-04",
@@ -439,9 +441,10 @@ window.XELIANS_DATA = {
     {
       id: "box-05",
       isoBox: {
-        poly: [[1076, 276], [1138, 307], [1138, 356], [1076, 386], [1014, 356], [1014, 307]],
-        center: [1076, 336],
-        zoomOrigin: { x: 64.4, y: 35.2 }
+        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
+        poly: [[1076, 250], [1138, 281], [1138, 334], [1076, 365], [1014, 334], [1014, 281]],
+        center: [1076, 312],
+        zoomOrigin: { x: 64.4, y: 33.2 }
       },
       number: "05",
       cote: "BOX-05",
@@ -514,9 +517,10 @@ window.XELIANS_DATA = {
     {
       id: "box-06",
       isoBox: {
-        poly: [[886, 746], [952, 779], [952, 840], [886, 874], [820, 840], [820, 779]],
-        center: [886, 812],
-        zoomOrigin: { x: 53.0, y: 86.1 }
+        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
+        poly: [[874, 722], [918, 744], [918, 796], [874, 818], [830, 796], [830, 744]],
+        center: [874, 766],
+        zoomOrigin: { x: 52.3, y: 81.4 }
       },
       number: "06",
       cote: "BOX-06",
@@ -592,9 +596,10 @@ window.XELIANS_DATA = {
     {
       id: "box-07",
       isoBox: {
-        poly: [[1160, 706], [1228, 740], [1228, 794], [1160, 828], [1092, 794], [1092, 740]],
-        center: [1160, 772],
-        zoomOrigin: { x: 69.4, y: 81.5 }
+        // Coordonnées isométriques fidèles à localisation-carton.png (1672 x 941 px)
+        poly: [[1158, 642], [1216, 672], [1216, 732], [1158, 762], [1100, 732], [1100, 672]],
+        center: [1158, 702],
+        zoomOrigin: { x: 69.3, y: 74.6 }
       },
       number: "07",
       cote: "BOX-07",

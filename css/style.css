@@ -66,21 +66,26 @@
    -------------------------------------------------------------------------- */
 .habbo-bubble {
   position: absolute;
-  bottom: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%);
+  /* Top et Left sont injectés en inline style : style="left: ...%; top: ...%;" */
+  transform: translate(-50%, -100%) translateY(-22px) scale(0.94);
   background: #FFFFFF;
   color: #0F0D2D;
-  border: 2px solid #000000;
-  border-radius: 6px;
-  padding: 8px 14px;
+  border: 2.5px solid #0F0D2D;
+  border-radius: 8px;
+  padding: 10px 16px;
   white-space: nowrap;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: 4px 4px 0 #000000;
   pointer-events: none;
   z-index: 50;
   opacity: 0;
-  transform: translateX(-50%) translateY(8px) scale(0.95);
-  transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.18, 0.89, 0.32, 1.28), visibility 0.18s ease;
+}
+
+.habbo-bubble.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -100%) translateY(-34px) scale(1);
 }
 
 .habbo-bubble::after {
@@ -89,9 +94,9 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 7px 7px 0 7px;
+  border-width: 9px 9px 0 9px;
   border-style: solid;
-  border-color: #000000 transparent transparent transparent;
+  border-color: #0F0D2D transparent transparent transparent;
 }
 
 .habbo-bubble::before {
@@ -99,8 +104,8 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-2px);
-  border-width: 6px 6px 0 6px;
+  transform: translateX(-50%) translateY(-3px);
+  border-width: 8px 8px 0 8px;
   border-style: solid;
   border-color: #FFFFFF transparent transparent transparent;
   z-index: 1;
@@ -146,11 +151,15 @@
 
 .carton-iso-tag {
   pointer-events: none;
-  transition: transform 0.2s ease;
 }
 
-.carton-iso-group:hover .carton-iso-tag {
-  transform: translateY(-4px);
+.carton-tag-inner {
+  transition: transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), filter 0.2s ease;
+}
+
+.carton-iso-group:hover .carton-tag-inner {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 0 10px #0EBCFF);
 }
 
 /* --------------------------------------------------------------------------

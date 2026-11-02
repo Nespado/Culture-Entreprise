@@ -37,6 +37,11 @@ class XeliansHabboApp {
       }
     } else if (boxParam) {
       this.zoomToBox(boxParam);
+    } else {
+      const hoverParam = params.get('hover');
+      if (hoverParam) {
+        this.onBoxHover(hoverParam);
+      }
     }
   }
 
@@ -155,10 +160,13 @@ class XeliansHabboApp {
           <line x1="${center[0]}" y1="${center[1]}" x2="${poly[5][0]}" y2="${poly[5][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
           <line x1="${center[0]}" y1="${center[1]}" x2="${poly[3][0]}" y2="${poly[3][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
 
-          <!-- Étiquette volante Habbo stylisée -->
-          <g transform="translate(${topX}, ${topY - 14})" class="carton-iso-tag">
-            <rect x="-24" y="-12" width="48" height="16" rx="4" fill="#0F0D2D" stroke="${b.color}" stroke-width="1.5" />
-            <text x="0" y="0" fill="${b.color}" font-family="ui-monospace, monospace" font-size="10" font-weight="800" text-anchor="middle" dominant-baseline="middle">${b.cote}</text>
+          <!-- Étiquette volante Habbo stylisée : agrandie et très lisible -->
+          <g transform="translate(${topX}, ${topY - 24})" class="carton-iso-tag">
+            <g class="carton-tag-inner">
+              <rect x="-48" y="-16" width="96" height="32" rx="6" fill="#0F0D2D" stroke="${b.color}" stroke-width="2.5" />
+              <circle cx="-30" cy="0" r="4.5" fill="${b.color}" />
+              <text x="8" y="1" fill="#FFFFFF" font-family="'Mulish', monospace" font-size="15" font-weight="900" letter-spacing="1.2" text-anchor="middle" dominant-baseline="middle">${b.cote}</text>
+            </g>
           </g>
 
         </g>
@@ -170,15 +178,22 @@ class XeliansHabboApp {
 
       bubblesHtml += `
         <div id="bubble-${b.id}" class="habbo-bubble" style="left: ${pctLeft}%; top: ${pctTop}%;">
-          <div class="flex items-center gap-1.5 font-bold text-xs" style="color: ${b.color};">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center px-2 py-0.5 rounded text-xs font-mono font-black text-white shrink-0" style="background-color: ${b.color};">
+              ${b.cote}
+            </span>
+            <span class="font-black text-sm text-[#0F0D2D]">
+              ${b.title}
+            </span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-600 mt-1.5 font-medium">
+            <span class="px-2 py-0.5 rounded bg-slate-100 font-bold text-slate-700">${b.concept}</span>
+            <span>•</span>
+            <span class="font-bold text-slate-800">📂 ${b.fiches.length} fiches suspendues</span>
+          </div>
+          <div class="mt-2 text-xs font-mono font-black text-[#1464FF] bg-sky-50 px-2.5 py-1 rounded border border-sky-200 inline-flex items-center gap-1.5">
             <span>📦</span>
-            <span>${b.cote} : ${b.title}</span>
-          </div>
-          <div class="text-[10px] text-slate-600 mt-0.5">
-            ${b.concept} • <strong>${b.fiches.length} fiches</strong>
-          </div>
-          <div class="text-[9px] font-mono font-bold text-sky-600 mt-1 uppercase tracking-wider">
-            [ Cliquer pour zoomer et ouvrir ]
+            <span>Cliquer pour zoomer et ouvrir</span>
           </div>
         </div>
       `;
@@ -192,16 +207,14 @@ class XeliansHabboApp {
     this.playSound('hover');
     const bubble = document.getElementById(`bubble-${boxId}`);
     if (bubble) {
-      bubble.style.opacity = '1';
-      bubble.style.transform = 'translateX(-50%) translateY(0) scale(1)';
+      bubble.classList.add('is-visible');
     }
   }
 
   onBoxLeave(boxId) {
     const bubble = document.getElementById(`bubble-${boxId}`);
     if (bubble) {
-      bubble.style.opacity = '0';
-      bubble.style.transform = 'translateX(-50%) translateY(8px) scale(0.95)';
+      bubble.classList.remove('is-visible');
     }
   }
 

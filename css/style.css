@@ -1,0 +1,311 @@
+/* ==========================================================================
+   STYLE OFFICIEL XELIANS & INTERFACE ACADÉMIQUE « CARTONS D'ARCHIVES »
+   Charte chromatique : #0EBCFF, #1464FF, #241F63, #0F0D2D, #FF4A54, #F7F9FE
+   Typographie : Muli (Google Fonts)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+
+:root {
+  --xelians-sky: #0EBCFF;
+  --xelians-royal: #1464FF;
+  --xelians-midnight: #241F63;
+  --xelians-dark: #0F0D2D;
+  --xelians-accent: #FF4A54;
+  --xelians-bg-light: #F7F9FE;
+  
+  --font-muli: 'Mulish', 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-muli);
+  background-color: var(--xelians-dark);
+  color: #F1F5F9;
+  overflow-x: hidden;
+}
+
+/* Trame de fond subtile façon grille de stockage d'archives */
+.bg-archival-grid {
+  background-color: #0F0D2D;
+  background-image: 
+    linear-gradient(to right, rgba(14, 188, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 188, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Rayonnage métallique d'archives */
+.shelf-rack {
+  position: relative;
+  border-bottom: 12px solid #1E293B;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.shelf-rack::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0EBCFF, #1464FF, #0EBCFF);
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   CARTON D'ARCHIVES MODULAIRE (MÉTAPHORE VISUELLE & 3D ISOMÉTRIQUE)
+   ========================================================================== */
+
+.archive-box-card {
+  position: relative;
+  background: linear-gradient(145deg, #18153f 0%, #110e33 60%, #0d0b28 100%);
+  border: 1px solid rgba(20, 100, 255, 0.25);
+  border-radius: 8px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  perspective: 1000px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.archive-box-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--xelians-sky), var(--xelians-royal));
+  opacity: 0.8;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Texture subtile de carton kraft d'archive renforcé */
+.box-kraft-texture {
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-size: 16px 16px, 100% 100%;
+}
+
+/* Effets de survol sur le carton d'archives */
+.archive-box-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: var(--xelians-sky);
+  box-shadow: 0 20px 35px -8px rgba(14, 188, 255, 0.35), 0 0 20px rgba(14, 188, 255, 0.2);
+}
+
+.archive-box-card:hover::before {
+  opacity: 1;
+  height: 8px;
+}
+
+/* Poignée de préhension du carton d'archives */
+.box-handle {
+  width: 72px;
+  height: 18px;
+  background-color: #0b0920;
+  border: 2px solid #2d266a;
+  border-radius: 9px;
+  margin: 0 auto;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.box-handle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+/* Code-barres stylisé */
+.barcode-strip {
+  background: repeating-linear-gradient(
+    90deg,
+    #0EBCFF,
+    #0EBCFF 2px,
+    transparent 2px,
+    transparent 4px,
+    #0EBCFF 4px,
+    #0EBCFF 7px,
+    transparent 7px,
+    transparent 9px,
+    #0EBCFF 9px,
+    #0EBCFF 10px,
+    transparent 10px,
+    transparent 13px
+  );
+  height: 26px;
+  width: 100%;
+  opacity: 0.85;
+}
+
+/* Tampon "VU / AUDITÉ" */
+.stamp-audited {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border: 2px solid #10B981;
+  border-radius: 4px;
+  color: #10B981;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: rotate(-3deg);
+  background: rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+/* ==========================================================================
+   BISEAU CARACTÉRISTIQUE XELIANS À 4°
+   Signature officielle de la charte de style en pied de page
+   ========================================================================== */
+
+.xelians-bevel-container {
+  position: relative;
+  margin-top: 5rem;
+  background-color: var(--xelians-dark);
+}
+
+.xelians-bevel-edge {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background-color: var(--xelians-dark);
+  clip-path: polygon(0 100%, 100% 0%, 100% 100%);
+  border-top: 3px solid var(--xelians-sky);
+}
+
+/* ==========================================================================
+   MODALE DOSSIER D'ARCHIVES
+   ========================================================================== */
+
+.dossier-modal-backdrop {
+  background-color: rgba(15, 13, 45, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.dossier-modal-container {
+  background: linear-gradient(160deg, #18153F 0%, #110E33 100%);
+  border: 1px solid rgba(14, 188, 255, 0.4);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px rgba(14, 188, 255, 0.15);
+  border-radius: 10px;
+}
+
+/* Onglets du dossier */
+.dossier-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #94A3B8;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.dossier-tab-btn:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dossier-tab-btn.active {
+  color: var(--xelians-sky) !important;
+  border-bottom-color: var(--xelians-sky) !important;
+  background: rgba(14, 188, 255, 0.12) !important;
+}
+
+/* Style de texte académique */
+.academic-prose {
+  color: #E2E8F0;
+  line-height: 1.75;
+}
+
+.academic-prose strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.academic-prose em {
+  color: var(--xelians-sky);
+  font-style: italic;
+}
+
+.academic-prose h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid var(--xelians-sky);
+  padding-left: 0.75rem;
+}
+
+.academic-prose p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Scrollbar personnalisée aux couleurs Xelians */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0920;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #241F63;
+  border-radius: 4px;
+  border: 1px solid rgba(14, 188, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--xelians-sky);
+}
+
+/* ==========================================================================
+   RÉGLAGES D'IMPRESSION (SUPPORT ACADÉMIQUE SUR PAPIER / PDF)
+   ========================================================================== */
+
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  .archive-box-card {
+    break-inside: avoid;
+    border: 1px solid #CCC !important;
+    box-shadow: none !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .academic-prose {
+    color: #000000 !important;
+  }
+
+  .xelians-bevel-edge {
+    display: none;
+  }
+}

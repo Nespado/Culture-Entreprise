@@ -145,6 +145,7 @@ window.XELIANS_DATA = {
           code: "FICHE 2A",
           title: "Valeur 1 : « Sens du collectif »",
           subtitle: "La première valeur cardinale officielle de Xelians",
+          illustrationRef: "ill-02",
           content: `
             <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
               <div class="p-5 bg-blue-50 border-l-4 border-[#1464FF] rounded-r-lg shadow-sm">
@@ -235,8 +236,7 @@ window.XELIANS_DATA = {
           code: "FICHE 2E",
           title: "Symboles, Baseline & Sponsoring Nautique",
           subtitle: "Le Mini 6.50 à foils et la devise « More than data, business »",
-          illustrationRef: "ill-02",
-          illustrationRefSecondary: "ill-03",
+          illustrationRef: "ill-03",
           content: `
             <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
               <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. La signature institutionnelle : « More than data, business »</h4>

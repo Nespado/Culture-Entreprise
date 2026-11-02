@@ -277,69 +277,50 @@ window.XELIANS_ILLUSTRATIONS = {
   },
 
   /**
-   * Illustration 3 : Le Mini 6.50 à Foils (Sponsoring RSE 2026)
+   * Illustration 3 : Le Voilier de Course Mini 6.50 à Foils (Sponsoring RSE Xelians)
    */
   renderIllustration3: function(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
     container.innerHTML = `
-      <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-md bg-white">
-        <div class="bg-gradient-to-b from-[#0F0D2D] via-[#141B44] to-[#0A223D] p-4 text-center">
-          <svg viewBox="0 0 800 400" class="w-full h-auto rounded select-none">
-            <defs>
-              <linearGradient id="seaGrad2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#0EBCFF" stop-opacity="0.8"/>
-                <stop offset="50%" stop-color="#1464FF" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="#0F0D2D"/>
-              </linearGradient>
-              <linearGradient id="sailGrad2" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#FFFFFF"/>
-                <stop offset="80%" stop-color="#E2E8F0"/>
-                <stop offset="100%" stop-color="#0EBCFF"/>
-              </linearGradient>
-            </defs>
+      <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-lg bg-white">
+        <!-- Cadre d'exposition photographique avec fond sombre Xelians -->
+        <div class="bg-gradient-to-b from-[#0F0D2D] via-[#141B44] to-[#0A223D] p-4 sm:p-6 text-center">
+          
+          <div class="inline-block relative max-w-sm sm:max-w-md mx-auto overflow-hidden rounded-xl border-2 border-sky-400/50 shadow-2xl group">
+            <!-- Photographie officielle du bateau avec la voile Xelians -->
+            <img src="assets/sponsoring_voilier_xelians.png" 
+                 alt="Voilier Mini 6.50 à foils avec la voile et le logo Xelians" 
+                 class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500 block" 
+                 onerror="this.src='https://www.xelians.com/wp-content/uploads/2021/01/Sponsoring-417x417.png'">
+            
+            <!-- Badge officiel superposé style Habbo / Xelians -->
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 bg-[#0F0D2D]/90 backdrop-blur-md px-3 py-2 rounded-lg border border-sky-400/50 flex items-center justify-between text-xs font-mono shadow-md">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-white font-bold tracking-wider">MINI 6.50 • COQUE #1067</span>
+              </div>
+              <span class="text-sky-300 font-bold px-1.5 py-0.5 rounded bg-sky-950 border border-sky-700">SPONSORING OFFICIEL</span>
+            </div>
+          </div>
 
-            <!-- Vagues stylisées -->
-            <path d="M 0 330 Q 150 300, 300 330 T 600 320 T 800 335 L 800 400 L 0 400 Z" fill="url(#seaGrad2)"/>
-            <path d="M 330 340 Q 220 360, 80 380" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.8"/>
-
-            <!-- FOIL CARBONE -->
-            <path d="M 390 270 L 410 340 L 450 330 L 400 355" fill="none" stroke="#FF4A54" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="410" cy="340" r="3" fill="#FFF"/>
-            <text x="460" y="335" fill="#FF4A54" font-size="9" font-family="monospace" font-weight="bold">FOIL EN SUSTENTATION</text>
-
-            <!-- COQUE MINI 6.50 -->
-            <path d="M 270 260 Q 380 270, 510 240 L 530 250 Q 380 290, 260 270 Z" fill="#0F0D2D" stroke="#0EBCFF" stroke-width="2"/>
-            <text x="360" y="267" fill="#FFFFFF" font-family="'Mulish', sans-serif" font-size="13" font-weight="900" letter-spacing="1.2">XELIANS</text>
-            <circle cx="345" cy="264" r="3.5" fill="#FF4A54"/>
-
-            <!-- GRÉEMENT -->
-            <line x1="390" y1="255" x2="380" y2="35" stroke="#CBD5E1" stroke-width="3"/>
-            <line x1="380" y1="35" x2="270" y2="260" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2,2"/>
-            <line x1="380" y1="35" x2="490" y2="245" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2,2"/>
-
-            <!-- VOILES -->
-            <path d="M 380 35 L 390 245 L 290 235 L 340 40 Z" fill="url(#sailGrad2)" stroke="#1464FF" stroke-width="1.5" opacity="0.95"/>
-            <text x="355" y="155" text-anchor="middle" fill="#0F0D2D" font-size="10" font-weight="bold">FRA 1081</text>
-            <text x="355" y="170" text-anchor="middle" fill="#1464FF" font-size="8" font-weight="bold">XELIANS FOILS</text>
-
-            <path d="M 380 40 L 530 230 Q 460 200, 390 245 Z" fill="#FF4A54" opacity="0.85" stroke="#FF4A54" stroke-width="1"/>
-            <text x="440" y="150" fill="#FFFFFF" font-size="9" font-weight="bold" transform="rotate(35 440 150)">MORE THAN DATA</text>
-          </svg>
+          <p class="text-xs text-sky-200/80 font-mono mt-3">
+            Spi officiel Xelians en navigation hauturière • Skippers Caroline Boule & Benoît Marie
+          </p>
         </div>
 
         <!-- Cartouche académique obligatoire -->
-        <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-700 space-y-1.5 font-sans">
+        <div class="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 text-xs text-slate-700 space-y-1.5 font-sans">
           <div class="flex flex-wrap items-center justify-between gap-1 text-[11px] font-mono text-slate-500">
             <span class="text-[#1464FF] font-bold uppercase">Illustration 3 / 5</span>
-            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Valeurs affichées vs identité métier</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold">Valeurs affichées vs identité métier (Schein)</span>
           </div>
-          <div class="font-bold text-slate-900 text-sm">Le Voilier de Course Mini 6.50 à Foils</div>
-          <div><strong>Source & Date :</strong> Sponsoring RSE 2026 (Skippers Caroline Boule & Benoît Marie)</div>
-          <div><strong>Lien avec le cours :</strong> Valeurs affichées vs identité métier (agilité contre pesanteur physique).</div>
+          <div class="font-bold text-slate-900 text-sm">Le Voilier de Course Mini 6.50 aux Couleurs de Xelians</div>
+          <div><strong>Source & Date :</strong> Photothèque officielle Xelians Sponsoring (2021-2026)</div>
+          <div><strong>Lien avec le cours :</strong> Artefacts symboliques et transmission des valeurs déclarées (Edgar Schein, Niveau 2).</div>
           <p class="text-slate-600 leading-relaxed pt-1 text-justify">
-            <em>Légende officielle & décryptage :</em> Le voilier volant à foils opère comme une prothèse symbolique d'agilité. Face à l'imaginaire d'inertie associé aux milliers de tonnes de papier archivé, ce bolide technologique volant au-dessus de l'océan projette une culture du dépassement de soi, de la haute technologie et de la vélocité decisionnelle.
+            <em>Légende officielle & décryptage sociologique :</em> Cette photographie met en scène le spi géant bleu ciel arborant le logo officiel et le ruban d'infinité Xelians sur l'océan. Sociologiquement, ce sponsoring agit comme une <strong>« prothèse symbolique d'agilité et de haute vélocité »</strong> : alors que le métier historique d'archivage physique évoque l'inertie, la pesanteur de milliers de tonnes de papier et le temps long des siècles, le voilier volant à foils incarne au contraire la sustentation au-dessus de l'eau, la vitesse pure et la résilience face aux tempêtes. Cette métaphore permet au groupe de séduire les jeunes talents de la tech et d'ancrer une image d'audace managériale et d'innovation technologique de rupture.
           </p>
         </div>
       </div>

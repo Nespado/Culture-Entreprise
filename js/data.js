@@ -1,26 +1,24 @@
 /**
  * DONNÉES ACADÉMIQUES DU PROJET DE RECHERCHE - CULTURE D'ENTREPRISE XELIANS
- * Analyse sociologique des organisations (Modèle Schein, OCAI Cameron & Quinn, Crozier, D'Aveni, Stalk)
- * Auteur : Étudiant-Alternant chez Xelians (Consultant Junior en Organisation & Stratégie)
- * Niveau académique : Master 2 / Bac+5 (Projet noté sur 20)
+ * Architecture : 7 Cartons d'archives isométriques x 14 Fiches d'analyse approfondie
+ * Direction : Habbo Hotel x Hangar d'Archivage Isométrique
+ * Auteur : Étudiant-Alternant chez Xelians (Niveau Master 2 / Bac+5, Noté sur 20)
  */
 
 window.XELIANS_DATA = {
   metadata: {
     title: "Xelians : Anatomie Sociologique d'une Forteresse Documentaire",
-    subtitle: "Déconstruction d'une culture d'entreprise hybride : entre mémoire physique sanctuarisée et impératif de vélocité logicielle",
+    subtitle: "Exploration isométrique 2.5D d'un hangar d'archives haute sécurité",
     author: "Étudiant-Alternant Xelians",
     academicYear: "2025 - 2026",
-    institution: "Master Stratégie d'Entreprise & Sociologie des Organisations",
-    evaluationFramework: "Grille d'évaluation Master Bac+5 (Notation /20)",
+    evaluationFramework: "Master 2 - Stratégie & Sociologie des Organisations (Noté sur 20)",
     company: {
       name: "Xelians",
-      groupHolding: "DTI Group (ex-Archiveco / Locarchives)",
-      headcount: 800,
-      turnover: "89 M€ (exercice consolidé)",
+      headcount: "800 collaborateurs",
+      turnover: "89 M€ de CA",
       physicalHoldings: "9 000 km linéaires d'archives",
       datacenters: "3 datacenters souverains en France",
-      facilities: "29 sites de conservation haute sécurité (dont 26 agréés SIAF)",
+      facilities: "29 sites de conservation (dont 26 agréés SIAF)",
       cac40Trust: "36 entreprises du CAC 40 sur 40",
       rdCommitment: "20 % du CA investi en R&D et solutions IT"
     }
@@ -30,572 +28,574 @@ window.XELIANS_DATA = {
     {
       id: "box-01",
       number: "01",
-      cote: "BOX-01 / ARTEFACTS & INFRASTRUCTURE",
-      title: "Ce qui se voit : Les Artefacts et la Sanctuarisation",
-      category: "Niveau 1 de Schein",
-      status: "Scellé NF Z40-350",
-      statusClass: "border-emerald-500 text-emerald-400 bg-emerald-950/40",
-      barcodeNumber: "376024-XEL-01-ART",
-      summary: "Cartographie de l'empreinte matérielle et rituelle de Xelians : 9 000 km d'archives, 29 forteresses physiques, 3 datacenters souverains et un lexique d'inviolabilité procédurale.",
-      keyMetrics: [
-        { label: "Collaborateurs", value: "800" },
-        { label: "Chiffre d'Affaires", value: "89 M€" },
-        { label: "Archives Physiques", value: "9 000 km" },
-        { label: "Sites / Agréés SIAF", value: "29 / 26" },
-        { label: "Datacenters Souverains", value: "3 en France" },
-        { label: "Confiance CAC 40", value: "36 / 40" }
-      ],
-      sections: [
+      cote: "BOX-01",
+      title: "Ce qui se voit : Les Artefacts visibles",
+      concept: "Niveau 1 de Schein : Artefacts visibles & Sanctuarisation physique",
+      color: "#0EBCFF",
+      tag: "Artefacts Schein",
+      summary: "9 000 km d'archives, 29 forteresses physiques, 3 datacenters souverains et un rituel de traçabilité absolue.",
+      fiches: [
         {
-          heading: "1. Présentation de l'organisation et dualité matricielle",
+          id: "fiche-1a",
+          code: "FICHE 1A",
+          title: "Les Gigas-Hangars & La Sanctuarisation Architecturale",
+          subtitle: "L'empreinte matérielle d'une forteresse documentaire",
+          illustrationRef: "ill-01",
           content: `
-<p class="mb-4 text-justify">
-<strong>Xelians</strong> se positionne aujourd'hui comme le leader français indépendant du traitement documentaire global, articulant une double polarité unique sur le marché : le tiers-archivage physique patrimonial et la gestion dématérialisée des flux d'information (BPO, GED, SAE). Fort de <strong>800 collaborateurs</strong> et d'un chiffre d'affaires consolidé de <strong>89 millions d'euros</strong>, le groupe assure la garde souveraine de plus de <strong>9 000 kilomètres linéaires d'archives</strong> (soit l'équivalent de la distance Paris-Tokyo) réparties sur <strong>29 sites de conservation sécurisés</strong>, dont <strong>26 bénéficient de l'agrément ministériel du Service Interministériel des Archives de France (SIAF)</strong> pour la conservation des archives publiques courantes et intermédiaires. En parallèle, Xelians opère <strong>3 datacenters souverains</strong> situés exclusivement sur le territoire national métropolitain.
-</p>
-<p class="mb-4 text-justify">
-Cette envergure contemporaine est le produit d'une histoire dense entamée il y a près d'un demi-siècle. L'entreprise est née de la fusion d'acteurs pionniers de l'archivage en France : <strong>Archiveco</strong> (fondée en 1977) et <strong>Locarchives</strong> (fondée en 1982), fédérés initialement sous l'égide de la holding DTI avant de converger en 2019 sous la marque unifiée <em>Xelians</em>. Loin d'une simple juxtaposition marchande, cette trajectoire historique s'est complétée par une politique ciblée de croissance externe logicielle et industrielle : absorption de <strong>Scaneco</strong> en 2004 (amorce du BPO de numérisation de masse), de <strong>CD-Doc</strong> en 2017 (dématérialisation comptable et fiscale), de l'éditeur open source <strong>Maarch</strong> (système d'archivage électronique et gestion de courrier), puis de <strong>DIS</strong> (2023) et <strong>Sodoc</strong> (2025). Il en résulte une organisation sociologiquement hybride, oscillant en permanence entre la temporalité séculaire de l'entrepôt d'archives et la vélocité immédiate de la plateforme SaaS.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <div class="bg-blue-50/70 border-l-4 border-[#0EBCFF] p-4 rounded-r-lg text-sm mb-4">
+                <span class="font-bold text-[#0F0D2D] block mb-1">Chiffres clés du périmètre d'alternance :</span>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-xs text-slate-700 mt-2">
+                  <div>• <strong>800</strong> collaborateurs</div>
+                  <div>• <strong>89 M€</strong> de CA consolidé</div>
+                  <div>• <strong>9 000 km</strong> linéaires gérés</div>
+                  <div>• <strong>29 sites</strong> de conservation</div>
+                  <div>• <strong>26 sites</strong> agréés SIAF</div>
+                  <div>• <strong>3 datacenters</strong> souverains</div>
+                </div>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. La matérialité de l'infrastructure selon Edgar Schein</h4>
+              <p>
+                Selon la typologie fondatrice d'<strong>Edgar Schein</strong> (1985), les <em>artefacts</em> constituent la première couche visible d'une organisation : les locaux, l'agencement spatial, le mobilier, les technologies et les règles vestimentaires ou d'accès. Chez Xelians, cette strate matérielle ne relève pas d'une scénographie tertiaire standard, mais d'une <strong>sanctuarisation quasi-monastique de la donnée physique et numérique</strong>.
+              </p>
+              <p>
+                Les 29 sites de conservation répartis sur le territoire national fonctionnent comme de véritables coffres-forts industriels. Chaque hangar répond à un faisceau de contraintes normatives impératives :
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                <li><strong>Régulation thermo-hygrométrique continue :</strong> Maintien permanent de la température entre 18°C et 20°C et d'un taux d'humidité relative de 50% ± 5% pour neutraliser l'hydrolyse acide du papier et prévenir l'apparition de micro-champignons, conformément à la norme <strong>NF Z40-350 (Marque NF 342)</strong>.</li>
+                <li><strong>Extinction automatique par gaz inerte (Novec 1230 / Inergen) :</strong> L'eau étant fatale pour la pâte à papier et les serveurs, les hangars et salles d'archives utilisent des gaz neutres qui étouffent instantanément tout départ de feu en abaissant le taux d'oxygène sans choc thermique ni résidu liquide.</li>
+                <li><strong>Sas de sécurité étanches et biométrie :</strong> Accès contrôlé par sas anti-intrusion avec pesée, badge P3 et reconnaissance biométrique. Aucune personne non habilitée ne peut pénétrer seule dans les travées.</li>
+                <li><strong>Souveraineté numérique et certifications HDS / ISO 27001 :</strong> Les 3 datacenters du groupe, situés exclusivement en France, répliquent cette étanchéité physique dans l'univers digital, hébergeant des données médicales hautement sensibles et des archives probantes de ministères régaliens.</li>
+              </ul>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">2. Analyse sociologique de la sanctuarisation</h4>
+              <p>
+                Cette architecture n'est pas qu'un outil de production logistique : elle <strong>discipline les corps et façonne la psychologie au travail</strong>. L'alternant ou le salarié franchissant les sas ne se sent pas dans un entrepôt ordinaire. Il manipule des conteneurs dont la perte ou la détérioration entraînerait la responsabilité pénale des mandataires de l'entreprise ou mettrait en péril le passif juridique d'un fleuron du CAC 40. L'espace physique impose ainsi une posture quotidienne d'humilité, de vigilance extrême et de respect sacré de la règle.
+              </p>
+            </div>
+          `
         },
         {
-          heading: "2. Artefact 1 - L'environnement physique et la sanctuarisation architecturale",
+          id: "fiche-1b",
+          code: "FICHE 1B",
+          title: "Le Langage Codifié & Les Rituels de Traçabilité",
+          subtitle: "Jargon normatif et réduction de l'incertitude bureaucratique",
           content: `
-<p class="mb-4 text-justify">
-Selon la grille théorique d'<strong>Edgar Schein</strong> (1985), les <em>artefacts</em> constituent la couche superficielle mais hautement révélatrice de la culture organisationnelle : tout ce qui peut être vu, entendu et ressenti par un observateur extérieur. Chez Xelians, l'espace physique n'est pas un cadre de travail neutre ; il s'apparente à une véritable <strong>sanctuarisation matérielle</strong>. Les 29 entrepôts d'archives constituent de gigantesques coffres-forts industriels soumis à des cahiers des charges d'une rigueur absolue.
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>Régulation thermo-hygrométrique permanente :</strong> Maintien strict de la température entre 18°C et 20°C et d'un taux d'humidité relative à 50% ± 5% pour neutraliser les dégradations chimiques des fibres cellulosiques et la prolifération fongique, conformément à la norme <em>NF Z40-350</em> (marque de certification NF 342).</li>
-  <li><strong>Systèmes d'extinction par gaz inerte :</strong> Banissement total de l'eau (qui anéantirait le patrimoine papier). Utilisation de dispositifs automatisés par gaz inerte (Novec 1230 / Inergen) réduisant le taux d'oxygène pour étouffer toute combustion instantanément sans endommager les supports ni les baies de serveurs.</li>
-  <li><strong>Barrières de sécurité étanches :</strong> Sas anti-intrusion, lecture biométrique, détection volumétrique infrarouge, surveillance vidéo 24/7/365 avec télé-surveillance de classe P3, clôtures périphériques électrifiées et confinement de classe bunker.</li>
-  <li><strong>Datacenters souverains HDS & ISO 27001 :</strong> Réplication des exigences physiques dans l'univers numérique grâce aux certifications d'Hébergement de Données de Santé (HDS) et ISO/IEC 27001, imposant une compartimentation rigide des accès serveurs.</li>
-</ul>
-<p class="mb-4 text-justify">
-<strong>Analyse sociologique de l'artefact :</strong> Cette forteresse matérielle dicte une posture psychologique et comportementale quotidienne d'<strong>extrême vigilance</strong>. Le collaborateur qui franchit les sas de Xelians ne pénètre pas dans un bureau ordinaire ; il intègre un temple de la mémoire légale. La manipulation d'un conteneur n'est jamais vécue comme le déplacement d'un simple objet logistique, mais comme la garde scellée d'un secret d'État ou d'un actif juridique capital pour une entreprise du CAC 40. L'espace physique façonne ainsi une éthique de la prudence et du sang-froid.
-</p>
-`
-        },
-        {
-          heading: "3. Artefact 2 - Le vocabulaire normatif et les rituels de traçabilité",
-          content: `
-<p class="mb-4 text-justify">
-Le langage et les cérémonials partagés constituent le second artefact majeur identifié chez Xelians. L'ensemble des interactions professionnelles est irrigué par un métalangage juridique et archivistique hautement codifié, inaccessible au profane :
-</p>
-<div class="grid md:grid-cols-2 gap-4 mb-4">
-  <div class="p-3 bg-slate-900/60 rounded border border-slate-700">
-    <span class="text-sky-400 font-bold block mb-1">DUA (Durée d'Utilité Administrative)</span>
-    <span class="text-xs text-slate-300">Délai légal ou réglementaire durant lequel un document doit être conservé sous sa forme probante avant son tri, son versement patrimonial ou son élimination certifiée.</span>
-  </div>
-  <div class="p-3 bg-slate-900/60 rounded border border-slate-700">
-    <span class="text-sky-400 font-bold block mb-1">Valeur Probante & Copie Fidèle</span>
-    <span class="text-xs text-slate-300">Norme <em>NF Z42-026</em> (NF 544) conférant à la numérisation la même force juridique que l'original papier grâce au scellement cryptographique et à l'intégrité garantie.</span>
-  </div>
-  <div class="p-3 bg-slate-900/60 rounded border border-slate-700">
-    <span class="text-sky-400 font-bold block mb-1">Bordereau de Versement & Récolement</span>
-    <span class="text-xs text-slate-300">Contrat juridique actant le transfert de garde d'un fonds documentaire et contrôle contradictoire exhaustif de conformité boîte par boîte.</span>
-  </div>
-  <div class="p-3 bg-slate-900/60 rounded border border-slate-700">
-    <span class="text-sky-400 font-bold block mb-1">Gestion du Vrac Numérique</span>
-    <span class="text-xs text-slate-300">Dépollution sémantique et typologique des gigaoctets de messageries et répertoires réseau non structurés pour restaurer la gouvernance de données.</span>
-  </div>
-</div>
-<p class="mb-4 text-justify">
-<strong>Les Rituels de signature et de contre-signature :</strong> Aucun carton ne peut être déplacé, ouvert, déplacé de travée ou détruit sans la génération conjointe d'un bordereau physique ou électronique d'émargement. L'opérateur appose un scellé numéroté inviolable, scanne le code-barres 2D via un terminal durci étalonné, consignant instantanément l'action dans une piste d'audit non altérable (audit trail).
-</p>
-<p class="mb-4 text-justify">
-<strong>Portée théorique (Michel Crozier - Le Phénomène bureaucratique) :</strong> Ces rituels ne sont pas de simples formalités logistiques ; ils représentent des mécanismes vitaux de <em>réduction de l'incertitude</em>. Dans l'univers d'archive, l'incertitude est synonyme de litige judiciaire ou d'amende CNIL. En institutionnalisant ces rituels de traçabilité, Xelians sécurise ses salariés en leur fournissant une couverture procédurale irréfutable : la règle écrite protège l'agent autant qu'elle assujettit son action.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. Un lexique technique inaccessible au profane</h4>
+              <p>
+                Le second artefact saillant chez Xelians réside dans l'omniprésence d'un métalangage juridique, technique et archivistique qui cadenasse chaque échange professionnel :
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-3">
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                  <span class="font-bold text-[#1464FF] text-sm block">DUA (Durée d'Utilité Administrative)</span>
+                  <p class="text-xs text-slate-600 mt-1">Délai légal ou réglementaire imposant la conservation stricte d'un document avant son versement patrimonial ou son pilonnage certifié.</p>
+                </div>
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                  <span class="font-bold text-[#1464FF] text-sm block">Récolement d'inventaire</span>
+                  <p class="text-xs text-slate-600 mt-1">Opération minutieuse de pointage contradictoire vérifiant boîte par boîte, cote par cote, la présence et l'intégrité de chaque unité d'archivage.</p>
+                </div>
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                  <span class="font-bold text-[#1464FF] text-sm block">Bordereau de versement</span>
+                  <p class="text-xs text-slate-600 mt-1">Acte contractuel et juridique transférant la responsabilité de garde du client vers Xelians, doté d'une signature légale opposable.</p>
+                </div>
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                  <span class="font-bold text-[#1464FF] text-sm block">Valeur Probante & Copie Fidèle (NF 544)</span>
+                  <p class="text-xs text-slate-600 mt-1">Norme NF Z42-026 conférant à la numérisation la même force probatoire devant un tribunal que l'original papier.</p>
+                </div>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">2. Les rituels comme mécanismes de protection (Michel Crozier)</h4>
+              <p>
+                Chaque manipulation d'un carton donne lieu à un rituel millimétré : scan au terminal durci 2D, scellement plastique numéroté à usage unique, double émargement physique et électronique. Aucun conteneur ne change de travée sans générer un enregistrement non modifiable dans la piste d'audit (audit trail).
+              </p>
+              <p>
+                Comme l'a théorisé <strong>Michel Crozier</strong> dans <em>Le Phénomène bureaucratique</em>, ces rituels et cette codification extrême remplissent une fonction essentielle : <strong>la réduction de l'incertitude</strong>. Face à l'aléa juridique permanent et au risque de pénalité contractuelle, le collaborateur se protège derrière le strict respect du rituel. La procédure écrite devient un bouclier qui immunise l'agent contre la faute personnelle en la diluant dans la régularité du processus.
+              </p>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-01",
-      illustrationTitle: "Plan architectural & vue en coupe d'un site de conservation haute sécurité certifié NF Z40-350 / ISO 27001",
-      theoreticalConcept: "Niveau 1 de Schein : Artefacts visibles & Sanctuarisation physique des organisations"
+      ]
     },
 
     {
       id: "box-02",
       number: "02",
-      cote: "BOX-02 / VALEURS & RHÉTORIQUE OFFICIELLE",
-      title: "Ce que l'entreprise dit d'elle-même : Les Valeurs Affichées",
-      category: "Niveau 2 de Schein",
-      status: "Homologué Direction",
-      statusClass: "border-sky-500 text-sky-400 bg-sky-950/40",
-      barcodeNumber: "376024-XEL-02-VAL",
-      summary: "Décryptage des 4 piliers axiologiques officiels (Collectif, Autonomie, Efficacité, Transparence), de la devise institutionnelle et du sponsoring nautique Mini 6.50 comme projection de haute vélocité.",
-      keyMetrics: [
-        { label: "Valeurs Cardinales", value: "4 piliers" },
-        { label: "Devise Groupe", value: "Plus que des données, votre avenir" },
-        { label: "Vecteur Métaphorique", value: "Mini 6.50 à Foils" },
-        { label: "Skippers Partenaires", value: "C. Boule & B. Marie" },
-        { label: "Investissement R&D", value: "20% du CA" },
-        { label: "Alignement RSE", value: "Bilan Carbone & Papiers 100% Recyclés" }
-      ],
-      sections: [
+      cote: "BOX-02",
+      title: "Ce que l'entreprise dit d'elle-même : Les 4 Valeurs",
+      concept: "Niveau 2 de Schein : Valeurs déclarées & Rhétorique managériale",
+      color: "#1464FF",
+      tag: "Valeurs Affichées",
+      summary: "Les 4 valeurs officielles rédigées mot pour mot, la baseline « More than data, business » et le Mini 6.50 à foils.",
+      fiches: [
         {
-          heading: "1. Les 4 valeurs cardinales du groupe Xelians",
+          id: "fiche-2a",
+          code: "FICHE 2A",
+          title: "Valeur 1 : « Sens du collectif »",
+          subtitle: "La première valeur cardinale officielle de Xelians",
           content: `
-<p class="mb-4 text-justify">
-Au deuxième niveau du modèle d'<strong>Edgar Schein</strong> figurent les <em>valeurs déclarées ou affichées</em> (espoused values). Elles représentent l'idéologie officielle, les justifications conscientes et les principes proclamés par le top management pour fédérer le corps social et séduire les parties prenantes externes (clients, régulateurs, candidats).
-</p>
-<div class="space-y-4 mb-4">
-  <div class="border-l-4 border-sky-400 pl-4 py-1">
-    <h4 class="font-bold text-white text-base">I. Le Sens du Collectif</h4>
-    <p class="text-sm text-slate-300 text-justify">
-      Revendiqué comme l'héritage solidaire des équipes historiques d'Archiveco et Locarchives. Dans une chaîne de traitement où une seule omission sur une ligne de récolement compromet l'ensemble du dossier client, la solidarité d'équipe et l'interdépendance fonctionnelle (entre manutentionnaires, archivistes diplômés, opérateurs de scanner et ingénieurs dev) sont érigées en impératif moral.
-    </p>
-  </div>
-  <div class="border-l-4 border-blue-600 pl-4 py-1">
-    <h4 class="font-bold text-white text-base">II. L'Autonomie</h4>
-    <p class="text-sm text-slate-300 text-justify">
-      Affichée comme la capacité donnée à chaque collaborateur de piloter son périmètre de responsabilité, de prendre des initiatives opérationnelles sur les chantiers de numérisation ou la gestion de compte client, et de s'auto-organiser dans un cadre responsabilisant.
-    </p>
-  </div>
-  <div class="border-l-4 border-indigo-500 pl-4 py-1">
-    <h4 class="font-bold text-white text-base">III. L'Efficacité</h4>
-    <p class="text-sm text-slate-300 text-justify">
-      Déclinée sous l'angle de la rigueur opérationnelle et du respect millimétré des engagements de service (SLA). L'efficacité chez Xelians se mesure au taux d'erreur tendanciellement nul (zéro défaut de récolement, zéro perte de paquet de données au sein du SAE).
-    </p>
-  </div>
-  <div class="border-l-4 border-rose-500 pl-4 py-1">
-    <h4 class="font-bold text-white text-base">IV. La Transparence</h4>
-    <p class="text-sm text-slate-300 text-justify">
-      Promesse faite aux clients et aux collaborateurs d'une traçabilité absolue des actions. Le client doit pouvoir auditer à tout instant la localisation exacte de son carton ou consulter les logs horodatés de son coffre-fort numérique souverain.
-    </p>
-  </div>
-</div>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <div class="p-5 bg-blue-50 border-l-4 border-[#1464FF] rounded-r-lg shadow-sm">
+                <span class="text-xs font-mono font-bold text-[#1464FF] uppercase tracking-wider block mb-2">Formulation officielle mot pour mot :</span>
+                <blockquote class="italic text-base font-semibold text-[#0F0D2D]">
+                  "Chez Xelians, la force de l’équipe fait la différence. Nos experts – archivistes, consultants, tech leads – unissent leurs compétences pour offrir des solutions performantes et adaptées aux enjeux de nos clients."
+                </blockquote>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Analyse sociologique de la valeur</h4>
+              <p>
+                Cette valeur puise sa légitimité dans l'interdépendance technique absolue des métiers de Xelians. La chaîne de valeur documentaire ne tolère aucune rupture : si l'opérateur de tri amont commet une erreur de dégrappage ou si le cariste intervertit deux boîtes en travée, le travail de l'ingénieur en reconnaissance sémantique (OCR/LAD) ou du consultant GED devient vain.
+              </p>
+              <p>
+                Le « Sens du collectif » sert également de ciment d'intégration pour amortir les chocs culturels issus de l'histoire du groupe : faire cohabiter sous une même bannière les salariés historiques d'Archiveco et de Locarchives, les opérateurs d'ateliers de numérisation BPO et les développeurs logiciels issus des filiales rachetées (DIS, Sodoc).
+              </p>
+            </div>
+          `
         },
         {
-          heading: "2. La devise institutionnelle : « Plus que des données, votre avenir »",
+          id: "fiche-2b",
+          code: "FICHE 2B",
+          title: "Valeur 2 : « Autonomie »",
+          subtitle: "La promesse managériale d'agilité et d'initiative",
           content: `
-<p class="mb-4 text-justify">
-La signature institutionnelle de Xelians – <em>« Plus que des données, votre avenir »</em> (déclinée à l'international sous la formule <em>« More than data, business »</em>) – traduit un basculement narratif stratégique. L'entreprise ne souhaite plus être perçue comme un simple « gardien de boîtes poussiéreuses » stockées au fond d'un hangar francilien, mais comme un <strong>catalyseur de performance décisionnelle</strong>. 
-</p>
-<p class="mb-4 text-justify">
-Le terme « données » ancre l'entreprise dans la modernité numérique et l'économie immatérielle, tandis que le mot « avenir » évacue le caractère anxiogène ou mortifère souvent associé aux archives mortes (successions, litiges, faillites, passif environnemental) pour le convertir en actif stratégique d'anticipation et de gouvernance souveraine.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <div class="p-5 bg-sky-50 border-l-4 border-[#0EBCFF] rounded-r-lg shadow-sm">
+                <span class="text-xs font-mono font-bold text-[#0EBCFF] uppercase tracking-wider block mb-2">Formulation officielle mot pour mot :</span>
+                <blockquote class="italic text-base font-semibold text-[#0F0D2D]">
+                  "Encourager l’initiative et la responsabilité : nos équipes sont agiles et expertes, capables d’innover et d’adapter nos solutions aux défis documentaires de chaque client."
+                </blockquote>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Analyse sociologique de la valeur</h4>
+              <p>
+                Dans la communication institutionnelle, l'« Autonomie » est présentée comme le vecteur d'émancipation professionnelle nécessaire à la transformation digitale. Elle valorise la capacité des chefs de projet et des consultants à s'adapter aux configurations informatiques hétérogènes des clients.
+              </p>
+              <p>
+                Cependant, comme nous le verrons dans le Carton 03, cette valeur affichée entre en collision directe avec le présupposé fondamental de conformité réglementaire : dans un métier certifié NF et HDS, l'autonomie ne peut jamais être une liberté anarchique d'improvisation, mais une <em>responsabilité d'application rigoureuse du cadre</em>.
+              </p>
+            </div>
+          `
         },
         {
-          heading: "3. Analyse sémiotique du sponsoring voile : Le Mini 6.50 à foils",
+          id: "fiche-2c",
+          code: "FICHE 2C",
+          title: "Valeur 3 : « Efficacité »",
+          subtitle: "Le culte de la tenue des engagements et des SLA",
           content: `
-<p class="mb-4 text-justify">
-L'un des vecteurs symboliques les plus puissants de la communication externe de Xelians est son engagement dans la course au large, en sponsorisant le prototype <strong>Mini 6.50 à foils</strong> barré par <strong>Caroline Boule</strong> et <strong>Benoît Marie</strong>. D'un point de vue sociologique, le choix de la voile hauturière technologique remplit une fonction de <em>compensation imaginaire</em> :
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>La dialectique de la pesanteur et de l'aérien :</strong> Alors que l'activité historique de l'archivage évoque la lourdeur du papier, la masse physique (des milliers de tonnes de cellulose) et l'inertie des rayonnages statiques, le Mini 6.50 à foils incarne la légèreté absolue, la sustentation au-dessus de l'eau, la rupture technologique et la vitesse pure.</li>
-  <li><strong>L'analogie de la haute technicité et des conditions extrêmes :</strong> Tout comme un bateau à foils exige une précision millimétrique de réglage pour voler sans chavirer au milieu de l'Atlantique, la gestion documentaire moderne requiert une architecture informatique de pointe (IA générative souveraine, cryptographie, résilience face aux cyberattaques).</li>
-  <li><strong>Le mythe du dépassement de soi et de l'agilité :</strong> Dans une entreprise d'archivage réglementée où les cadences peuvent être répétitives, projeter l'image de marins d'élite affrontant les éléments permet d'insuffler une culture de l'exploit individuel et de l'audace technique.</li>
-</ul>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <div class="p-5 bg-indigo-50 border-l-4 border-[#241F63] rounded-r-lg shadow-sm">
+                <span class="text-xs font-mono font-bold text-[#241F63] uppercase tracking-wider block mb-2">Formulation officielle mot pour mot :</span>
+                <blockquote class="italic text-base font-semibold text-[#0F0D2D]">
+                  "Notre efficacité repose sur la réactivité et le pragmatisme de nos équipes, pour offrir à chaque client une réponse rapide et adaptée à ses besoins."
+                </blockquote>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Analyse sociologique de la valeur</h4>
+              <p>
+                L'« Efficacité » incarne le pont entre le conservateur d'archives et le prestataire de services BPO. Dans une activité où les pénalités contractuelles de retard se chiffrent en milliers d'euros dès qu'un pli bancaire ou un dossier d'assurance n'est pas restitué sous H+4, l'efficacité est directement indexée sur la productivité horaire, la suppression des temps morts et la fluidité des flux de travail.
+              </p>
+            </div>
+          `
+        },
+        {
+          id: "fiche-2d",
+          code: "FICHE 2D",
+          title: "Valeur 4 : « Transparence »",
+          subtitle: "L'éthique de la traçabilité et de la relation de confiance",
+          content: `
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <div class="p-5 bg-rose-50 border-l-4 border-[#FF4A54] rounded-r-lg shadow-sm">
+                <span class="text-xs font-mono font-bold text-[#FF4A54] uppercase tracking-wider block mb-2">Formulation officielle mot pour mot :</span>
+                <blockquote class="italic text-base font-semibold text-[#0F0D2D]">
+                  "Nous construisons des relations de confiance grâce à une communication claire, des engagements tenus et une approche éthique, garantissant la conformité et la pérennité des données."
+                </blockquote>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Analyse sociologique de la valeur</h4>
+              <p>
+                La transparence chez Xelians est inséparable de la notion d'<strong>auditabilité permanente</strong>. Elle engage l'entreprise à fournir à ses clients et aux régulateurs de l'État (SIAF, ANS, CNIL) la preuve mathématique et juridique que leurs fonds documentaires n'ont subi aucune altération, aucune fuite et aucun transfert illicite hors de l'Union européenne.
+              </p>
+            </div>
+          `
+        },
+        {
+          id: "fiche-2e",
+          code: "FICHE 2E",
+          title: "Symboles, Baseline & Sponsoring Nautique",
+          subtitle: "Le Mini 6.50 à foils et la devise « More than data, business »",
+          illustrationRef: "ill-02",
+          illustrationRefSecondary: "ill-03",
+          content: `
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. La signature institutionnelle : « More than data, business »</h4>
+              <p>
+                La baseline officielle de Xelians – <em>« More than data, business »</em> (déclinée en français sous la formule <em>« Plus que des données, votre avenir »</em>) – marque un tournant stratégique majeur. Il ne s'agit plus de valoriser des malles d'archives passives stockées sur des étagères poussiéreuses, mais d'affirmer que <strong>la gouvernance documentaire est le carburant de la prise de décision stratégique des entreprises</strong>.
+              </p>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">2. Analyse sémiotique du voilier Mini 6.50 à foils</h4>
+              <p>
+                L'un des choix de communication les plus spectaculaires de Xelians est le sponsoring de course au large du <strong>Mini 6.50 à foils</strong> barré par <strong>Caroline Boule</strong> et <strong>Benoît Marie</strong>.
+              </p>
+              <p>
+                Sociologiquement, ce sponsoring agit comme une <strong>prothèse symbolique d'agilité et de haute vélocité</strong> :
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                <li>Le métier historique d'archivage physique évoque l'inertie, la pesanteur de milliers de tonnes de papier et le temps long des siècles.</li>
+                <li>Le Mini 6.50 à foils incarne au contraire la sustentation au-dessus de l'eau, la fibre de carbone, les calculs hydrodynamiques de pointe et la vitesse pure (plus de 25 nœuds).</li>
+                <li>Cette métaphore permet au groupe de séduire les jeunes talents de la tech et de projeter une image d'audace, de résilience face aux tempêtes et d'innovation technologique de rupture.</li>
+              </ul>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-02",
-      illustrationTitle: "Charte chromatique officielle Xelians et sémiologie du logo à boucle infinie",
-      theoreticalConcept: "Niveau 2 de Schein : Valeurs déclarées, mythes fondateurs et projections symboliques"
+      ]
     },
 
     {
       id: "box-03",
       number: "03",
-      cote: "BOX-03 / PRÉSUPPOSÉS FONDAMENTAUX & ÉCART DU RÉEL",
-      title: "Ce qui se vit réellement : Présupposés Inconscients et Dissonance",
-      category: "Niveau 3 de Schein",
-      status: "Audit Critique - Non Masqué",
-      statusClass: "border-rose-500 text-rose-400 bg-rose-950/40",
-      barcodeNumber: "376024-XEL-03-PRE",
-      summary: "Mise au jour du présupposé invisible de Schein : l'angoisse de la faute existentielle irréparable, et analyse sociologique des tensions entre le discours agile et la pesanteur procédurale.",
-      keyMetrics: [
-        { label: "Niveau de Risque Toléré", value: "0 % (Zéro défaut)" },
-        { label: "Nature du Présupposé", value: "Inviolabilité & Traçabilité" },
-        { label: "Écart Axiologique", value: "Autonomie vs Contrôle" },
-        { label: "Impact Managérial", value: "Pyramide de Décharge Légale" },
-        { label: "Source d'Inquiétude", value: "Fuite, Altération, Perte" },
-        { label: "Régime de Responsabilité", value: "Pénal & Contractuel" }
-      ],
-      sections: [
+      cote: "BOX-03",
+      title: "Ce qui se vit réellement : Présupposé & Dissonance",
+      concept: "Niveau 3 de Schein : Présupposés fondamentaux inconscients & Écart du réel",
+      color: "#FF4A54",
+      tag: "Dissonance & Réel",
+      summary: "L'axiome du zéro défaut existentiel et la confrontation critique avec la promesse d'autonomie.",
+      fiches: [
         {
-          heading: "1. Formulation du présupposé fondamental sous-jacent (Schein)",
+          id: "fiche-3a",
+          code: "FICHE 3A",
+          title: "L'Hypothèse du Présupposé Fondamental (Schein)",
+          subtitle: "L'injonction d'intégrité absolue et la peur de la faute éliminatoire",
           content: `
-<p class="mb-4 text-justify">
-Au niveau le plus profond et le plus stable de l'analyse sociologique d'<strong>Edgar Schein</strong> se nichent les <em>présupposés fondamentaux inconscients</em> (basic underlying assumptions). Ce sont les croyances tacites, non discutées, invisibles et intériorisées par tous les membres du collectif, dictant de manière automatique la perception de la réalité, les arbitrages quotidiens et les jugements moraux au travail.
-</p>
-<div class="p-4 rounded-lg bg-slate-900 border-2 border-rose-500/80 my-4 shadow-lg shadow-rose-950/30">
-  <p class="text-sm font-semibold text-rose-300 uppercase tracking-wider mb-2 flex items-center gap-2">
-    <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-    Thèse centrale - Axiome culturel fondamental chez Xelians :
-  </p>
-  <blockquote class="text-base italic text-white font-serif leading-relaxed">
-    « Un document égaré, altéré ou divulgué constitue une faute existentielle irréparable ; la conformité réglementaire et la rigueur procédurale priment sur l'initiative individuelle spontanée. »
-  </blockquote>
-</div>
-<p class="mb-4 text-justify">
-Ce postulat matriciel découle directement du métier historique de l'archivage. Dans la culture bancaire, pharmaceutique ou étatique qui forme le socle de clientèle de Xelians, la perte d'un dossier de prêt original, d'un brevet de molécule chimique ou d'un acte notarié engage la responsabilité pénale et la survie économique de l'organisation mandante. Ainsi, chaque salarié a intériorisé qu'un document n'est pas un flux recyclable banal, mais un <strong>titre juridique vivant</strong> dont la garde confère un devoir quasi-religieux d'intégrité.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <p>
+                Au niveau 3 du modèle d'<strong>Edgar Schein</strong> se situent les <em>présupposés fondamentaux inconscients</em> : les croyances invisibles, tenues pour acquises et non négociables, qui dictent secrètement les comportements quotidiens des acteurs.
+              </p>
+
+              <div class="p-5 bg-red-50 border-2 border-[#FF4A54] rounded-lg my-3 shadow-md">
+                <span class="text-xs font-mono font-bold text-[#FF4A54] uppercase tracking-wider block mb-2">Thèse sociologique centrale de notre recherche :</span>
+                <blockquote class="italic text-base font-bold text-[#0F0D2D] font-serif leading-relaxed">
+                  "L'intégrité de la donnée est absolue ; une erreur, une fuite ou un document égaré constitue une faute éliminatoire. La norme et la conformité juridique priment toujours sur l'initiative personnelle."
+                </blockquote>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Origine et intériorisation du présupposé</h4>
+              <p>
+                Ce postulat s'explique par la nature des clients de Xelians : banques d'investissement, laboratoires pharmaceutiques, ministères des Armées et de la Justice, directions juridiques du CAC 40. Dans ces secteurs, un contrat de prêt égaré entraîne la nullité de la créance ; un dossier de lot clinique manquant bloque l'autorisation de mise sur le marché d'un médicament ; une pièce d'identité divulguée expose à des sanctions pénales immédiates de la CNIL.
+              </p>
+              <p>
+                En conséquence, chaque salarié a profondément intériorisé que l'erreur n'est pas un incident de parcours formateur, mais une <strong>menace existentielle pour l'organisation</strong>.
+              </p>
+            </div>
+          `
         },
         {
-          heading: "2. Analyse critique des écarts : Confrontation du discours corporate et du terrain",
+          id: "fiche-3b",
+          code: "FICHE 3B",
+          title: "L'Écart Critique avec la Valeur « Autonomie »",
+          subtitle: "Confrontation entre le discours corporate et le vécu de terrain",
           content: `
-<p class="mb-4 text-justify">
-L'immersion empirique et l'analyse sociologique révèlent une <strong>dissonance organisationnelle aiguë</strong> entre l'affichage des valeurs managériales modernes (Carton 02) et la réalité vécue dans les ateliers de numérisation et les dépôts de conservation :
-</p>
-<div class="space-y-4 mb-4">
-  <div class="p-4 bg-slate-900/80 rounded border border-slate-700">
-    <div class="flex items-center justify-between mb-2">
-      <span class="font-bold text-sky-400">Dissonance 1 : La promesse d'« Autonomie » face à la cage d'acier procédurale</span>
-      <span class="text-xs px-2 py-0.5 rounded bg-rose-950 text-rose-400 border border-rose-800">Écart Majeur</span>
-    </div>
-    <p class="text-xs text-slate-300 text-justify">
-      Alors que les plaquettes RH vantent l'« autonomie » et l'émancipation des collaborateurs, le travail quotidien est enserré dans des gammes opératoires millimétrées régies par les normes NF Z42-026 et NF Z40-350. Tout écart par rapport à la consigne de numérisation ou au mode de classement d'un conteneur est traqué par les audits qualité. L'autonomie réelle se résume ainsi à une <em>liberté d'exécution confinée dans un couloir hautement balisé</em>.
-    </p>
-  </div>
-  <div class="p-4 bg-slate-900/80 rounded border border-slate-700">
-    <div class="flex items-center justify-between mb-2">
-      <span class="font-bold text-sky-400">Dissonance 2 : L'injonction d'« Agilité logicielle » face à la rente du papier</span>
-      <span class="text-xs px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800">Tension Économique</span>
-    </div>
-    <p class="text-xs text-slate-300 text-justify">
-      La direction prône une transition vers le modèle SaaS récurrent et les API cloud ultra-réactives. Or, le modèle économique historique et la trésorerie la plus stable restent alimentés par la rente d'entreposage physique : les DUA s'étendant sur 10, 20 ou 30 ans garantissent une facturation récurrente d'espace au mètre linéaire sans requérir de refonte technologique permanente. Ce contraste génère une fracture culturelle sourde entre les « gens du papier » (garants des marges historiques) et les « gens du software » (investisseurs de capitaux).
-    </p>
-  </div>
-  <div class="p-4 bg-slate-900/80 rounded border border-slate-700">
-    <div class="flex items-center justify-between mb-2">
-      <span class="font-bold text-sky-400">Dissonance 3 : L'affichage de la « Transparence » face au secret d'État</span>
-      <span class="text-xs px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800">Dilemme Opérationnel</span>
-    </div>
-    <p class="text-xs text-slate-300 text-justify">
-      Le groupe proclame la transparence absolue envers ses parties prenantes. Cependant, en raison des agréments SIAF pour la Défense nationale et les ministères régaliens, ainsi que de la certification HDS (secret médical), la rétention prudente de l'information reste un réflexe de survie professionnelle. Le cloisonnement étanche prévaut systématiquement sur la libre circulation interne du savoir.
-    </p>
-  </div>
-</div>
-`
-        },
-        {
-          heading: "3. La pyramide de validation et le syndrome de la couverture légale",
-          content: `
-<p class="mb-4 text-justify">
-Cette prégnance du présupposé de zéro défaut engendre ce que la sociologie des bureaucraties qualifie de <strong>décharge hiérarchique pyramidale</strong> : personne ne souhaite endosser seul la responsabilité juridique d'un déclassement ou d'une anomalie de scellé. Les décisions nécessitent des contre-signatures multiples, créant une inertie organisationnelle perçue par les nouveaux arrivants (notamment les profils développeurs tech) comme une lourdeur anachronique, mais vécue par les archivistes seniors comme le garant fondamental de la survie de la marque.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">Une liberté sous surveillance procédurale étroite</h4>
+              <p>
+                L'observation participante menée durant notre alternance fait éclater une <strong>dissonance organisationnelle majeure</strong> entre l'affichage corporate et l'expérience vécue en atelier de numérisation ou en dépôt :
+              </p>
+              
+              <div class="space-y-3 my-4">
+                <div class="p-3 bg-slate-50 border-l-4 border-slate-400 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">1. L'Autonomie proclamée vs La Cage d'Acier Normative :</strong>
+                  <p class="text-xs text-slate-600 mt-1">
+                    Les discours de la direction valorisent l'esprit d'initiative, l'agilité et l'autonomie des collaborateurs. Pourtant, sur le terrain, chaque geste opérationnel (du dégrappage au scellement RFID) est enserré dans des gammes opératoires strictes d'audits NF et ISO. L'autonomie réelle est une « liberté d'exécution dans un couloir hautement balisé ».
+                  </p>
+                </div>
+                <div class="p-3 bg-slate-50 border-l-4 border-slate-400 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">2. Le syndrome de la décharge hiérarchique pyramidale :</strong>
+                  <p class="text-xs text-slate-600 mt-1">
+                    Puisque l'erreur constitue une faute éliminatoire, aucun collaborateur ne prend le risque de déroger seul à la consigne. Tout incident déclenche une remontée vers les échelons supérieurs pour obtenir un visa ou une double signature de décharge. L'organisation cultive ainsi malgré elle une culture de prudence extrême et de rétention d'initiative.
+                  </p>
+                </div>
+                <div class="p-3 bg-slate-50 border-l-4 border-slate-400 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">3. La rente d'entreposage face à l'injonction d'agilité SaaS :</strong>
+                  <p class="text-xs text-slate-600 mt-1">
+                    Alors que le top management exhorte à accélérer vers le modèle SaaS récurrent, la trésorerie la plus stable de Xelians reste assise sur la rente des loyers d'archives physiques garantis par des DUA de 10 à 30 ans. Cette dualité économique entretient un fossé culturel entre les « archivistes du papier » et les « développeurs du cloud ».
+                  </p>
+                </div>
+              </div>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-03",
-      illustrationTitle: "Le voilier Mini 6.50 à foils sponsorisé par Xelians (Skippers Caroline Boule & Benoît Marie)",
-      theoreticalConcept: "Niveau 3 de Schein : Présupposés fondamentaux inconscients et analyse des écarts du réel"
+      ]
     },
 
     {
       id: "box-04",
       number: "04",
-      cote: "BOX-04 / DIAGNOSTIC OCAI (CAMERON & QUINN)",
-      title: "Diagnostic sur la Grille OCAI : Hiérarchie et Marché",
-      category: "Modèle Cameron & Quinn",
-      status: "Cartographié & Étalonné",
-      statusClass: "border-purple-500 text-purple-400 bg-purple-950/40",
-      barcodeNumber: "376024-XEL-04-OCA",
-      summary: "Modélisation quantitative sur le Competing Values Framework : un profil hyper-hiérarchique (42%) axé sur la conformité, couplé à une dynamique de marché agressive (28%) portée par les SLA.",
-      keyMetrics: [
-        { label: "Culture Hiérarchique", value: "42 % (Dominante)" },
-        { label: "Culture Marché", value: "28 % (Secondaire)" },
-        { label: "Culture Clan", value: "18 % (Résiduelle)" },
-        { label: "Culture Adhocratie", value: "12 % (Émergente)" },
-        { label: "Axe Prépondérant", value: "Stabilité & Contrôle (70%)" },
-        { label: "Axe Secondaire", value: "Orientation Externe (40%)" }
-      ],
-      sections: [
+      cote: "BOX-04",
+      title: "Diagnostic sur la Grille OCAI (Cameron & Quinn)",
+      concept: "Competing Values Framework : Typologie culturelle Hiérarchie & Marché",
+      color: "#8B5CF6",
+      tag: "Modèle OCAI",
+      summary: "Modélisation en radar : dominance Hiérarchique (42%) et Marché (28%), cas concrets de pilonnage et numérisation.",
+      fiches: [
         {
-          heading: "1. Positionnement sur les 4 quadrants du Competing Values Framework",
+          id: "fiche-4a",
+          code: "FICHE 4A",
+          title: "Profil Culturel Dominant : Hiérarchie & Marché",
+          subtitle: "Cartographie quantitative sur le Competing Values Framework",
+          illustrationRef: "ill-04",
           content: `
-<p class="mb-4 text-justify">
-Le modèle <strong>OCAI (Organizational Culture Assessment Instrument)</strong> développé par <strong>Kim Cameron et Robert Quinn</strong> (1999) permet d'évaluer la culture d'une entreprise le long de deux axes orthogonaux majeurs :
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li>L'axe vertical : <strong>Flexibilité et Dynamisme</strong> opposé à <strong>Stabilité et Contrôle</strong>.</li>
-  <li>L'axe horizontal : <strong>Orientation Interne et Intégration</strong> opposée à <strong>Orientation Externe et Différenciation</strong>.</li>
-</ul>
-<p class="mb-4 text-justify">
-L'analyse menée chez Xelians aboutit à une distribution fortement polarisée :
-</p>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4 text-center">
-  <div class="p-3 bg-purple-950/40 border border-purple-500 rounded">
-    <div class="text-2xl font-black text-purple-400">42 %</div>
-    <div class="text-xs font-bold text-white uppercase mt-1">Hiérarchie</div>
-    <div class="text-[10px] text-slate-400">Contrôle, stabilité, procédures, conformité NF/ISO</div>
-  </div>
-  <div class="p-3 bg-blue-950/40 border border-blue-500 rounded">
-    <div class="text-2xl font-black text-blue-400">28 %</div>
-    <div class="text-xs font-bold text-white uppercase mt-1">Marché</div>
-    <div class="text-[10px] text-slate-400">Compétitivité, SLA stricts, rentabilité BPO</div>
-  </div>
-  <div class="p-3 bg-emerald-950/40 border border-emerald-500 rounded">
-    <div class="text-2xl font-black text-emerald-400">18 %</div>
-    <div class="text-xs font-bold text-white uppercase mt-1">Clan</div>
-    <div class="text-[10px] text-slate-400">Cohésion d'équipe, mémoire Archiveco, loyauté</div>
-  </div>
-  <div class="p-3 bg-rose-950/40 border border-rose-500 rounded">
-    <div class="text-2xl font-black text-rose-400">12 %</div>
-    <div class="text-xs font-bold text-white uppercase mt-1">Adhocratie</div>
-    <div class="text-[10px] text-slate-400">Innovation disruptive, prise de risque, R&D IA</div>
-  </div>
-</div>
-<p class="mb-4 text-justify">
-<strong>Interprétation sociologique :</strong> Xelians présente un <strong>profil combiné Hiérarchie-Marché</strong>. L'écrasante prédominance de la <em>Hiérarchie</em> (42%) découle directement des exigences normatives et de la sanctuarisation réglementaire. La composante <em>Marché</em> (28%) traduit l'environnement hautement concurrentiel des prestations BPO et SaaS, où les clients du CAC 40 exigent des pénalités financières immédiates au moindre manquement de délai de traitement. Le <em>Clan</em> (18%) subsiste dans la convivialité locale des dépôts régionaux mais recule face à la financiarisation. Enfin, l'<em>Adhocratie</em> (12%) demeure le quadrant le plus faible, l'organisation récompensant la conformité et sanctionnant l'expérimentation hasardeuse.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <p>
+                L'évaluation par la grille <strong>OCAI (Organizational Culture Assessment Instrument)</strong> de <strong>Cameron & Quinn</strong> (1999) modélise la culture selon deux axes : <em>Flexibilité vs Stabilité</em> et <em>Orientation Interne vs Orientation Externe</em>.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-3 text-center font-mono">
+                <div class="p-3 bg-purple-50 border border-purple-300 rounded">
+                  <span class="text-xl font-black text-purple-700 block">42 %</span>
+                  <span class="text-xs font-bold text-slate-700 uppercase">Hiérarchie</span>
+                  <span class="text-[10px] text-slate-500 block">Règles & Stabilité</span>
+                </div>
+                <div class="p-3 bg-blue-50 border border-blue-300 rounded">
+                  <span class="text-xl font-black text-blue-700 block">28 %</span>
+                  <span class="text-xs font-bold text-slate-700 uppercase">Marché</span>
+                  <span class="text-[10px] text-slate-500 block">SLA & Compétitivité</span>
+                </div>
+                <div class="p-3 bg-emerald-50 border border-emerald-300 rounded">
+                  <span class="text-xl font-black text-emerald-700 block">18 %</span>
+                  <span class="text-xs font-bold text-slate-700 uppercase">Clan</span>
+                  <span class="text-[10px] text-slate-500 block">Mémoire historique</span>
+                </div>
+                <div class="p-3 bg-rose-50 border border-rose-300 rounded">
+                  <span class="text-xl font-black text-rose-700 block">12 %</span>
+                  <span class="text-xs font-bold text-slate-700 uppercase">Adhocratie</span>
+                  <span class="text-[10px] text-slate-500 block">Innovation & R&D</span>
+                </div>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Interprétation stratégique</h4>
+              <p>
+                Xelians présente un <strong>profil combiné Hiérarchie-Marché cumulant 70 % sur l'axe du Contrôle et de la Stabilité</strong>.
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                <li><strong>La Hiérarchie (42%)</strong> traduit la suprématie des certifications (NF 342, NF 461, HDS, ISO 27001) et la bureaucratisation protectrice.</li>
+                <li><strong>Le Marché (28%)</strong> reflète l'impératif commercial des SLA en BPO documentaire, la productivité horaire et la rentabilité exigée par l'actionnariat.</li>
+                <li><strong>Le Clan (18%)</strong> subsiste dans la mémoire affective des équipes pionnières d'Archiveco et Locarchives.</li>
+                <li><strong>L'Adhocratie (12%)</strong> reste le quadrant le plus faible, l'expérimentation disruptive étant bridée par la peur du risque de non-conformité.</li>
+              </ul>
+            </div>
+          `
         },
         {
-          heading: "2. Cas concret d'illustration du profil hiérarchique : La procédure de destruction certifiée",
+          id: "fiche-4b",
+          code: "FICHE 4B",
+          title: "Cas Pratique : Destruction Certifiée & Numérisation Fidèle",
+          subtitle: "L'expression empirique du profil de contrôle absolu",
           content: `
-<p class="mb-4 text-justify">
-Rien n'illustre mieux la prégnance du quadrant Hiérarchique chez Xelians que le déroulement d'une opération de <strong>destruction physique certifiée (pilonnage confidentiel)</strong> de conteneurs arrivés à échéance de DUA :
-</p>
-<ol class="list-decimal pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>Émission du bordereau contradictoire :</strong> Notification automatisée au mandataire légal du client via le portail client sécurisé. L'ordre de destruction doit être visé et signé par deux autorités juridiques habilitées du client (pouvoirs formels).</li>
-  <li><strong>Double vérification d'absence de gel légal (Legal Hold) :</strong> Interrogation croisée des bases de données juridiques pour garantir qu'aucune procédure contentieuse ou enquête fiscale en cours ne suspend la destruction.</li>
-  <li><strong>Extraction robotisée sous témoin :</strong> Sortie des cartons par le cariste muni d'un lecteur RFID/code-barres avec confirmation sonore et visuelle de conformité de l'identifiant de boîte.</li>
-  <li><strong>Transfert sécurisé en zone de confinement scellée :</strong> Pesée étalonnée au gramme près et transit dans un camion sécurisé géolocalisé avec scellés inviolables vers le centre de broyage agréé.</li>
-  <li><strong>Broyage DIN 66399 classe P4/P5 :</strong> Lacération des documents en particules millimétriques irréversibles en présence d'un huissier ou d'un contrôleur assermenté.</li>
-  <li><strong>Émission du certificat de destruction infalsifiable :</strong> Horodatage cryptographique eIDAS, inscription dans le registre légal et traçabilité de la revalorisation de la pulpe de papier à 100% dans la filière papetière française.</li>
-</ol>
-<p class="mb-4 text-justify">
-Chaque millimètre de cette procédure répond au paradigme hiérarchique : éliminer toute déviation humaine par une succession irréversible de contrôles croisés.
-</p>
-`
-        },
-        {
-          heading: "3. La qualification d'un flux de numérisation à valeur probante (NF Z42-026)",
-          content: `
-<p class="mb-4 text-justify">
-Sur le versant numérique, le profil de contrôle s'exprime avec la même rigueur lors de la mise en place d'une chaîne de numérisation fidèle. Les scanners industriels sont étalonnés chaque matin à l'aide de mires optiques pour mesurer la fidélité colorimétrique et géométrique. Dès la capture de l'image, une <strong>empreinte cryptographique SHA-256</strong> est générée, scellée avec le certificat serveur Xelians et injectée dans le Système d'Archivage Électronique (SAE) audité ISO 14641, neutralisant tout risque de requalification juridique.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. La procédure de destruction certifiée (Pilonnage)</h4>
+              <p>
+                La procédure de destruction d'archives physiques chez Xelians illustre à la perfection la dominance du quadrant Hiérarchique :
+              </p>
+              <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+                <li><strong>Avis d'échéance de DUA :</strong> Déclenchement automatique par le progiciel de gestion d'entrepôt après expiration du délai légal.</li>
+                <li><strong>Bordereau contradictoire et vérification de Legal Hold :</strong> Vérification qu'aucun blocage judiciaire ou enquête fiscale ne gèle les conteneurs. Double signature autorisée du client mandataire.</li>
+                <li><strong>Extraction robotisée sous témoin :</strong> Scan RFID du carton, scellé inviolable de transport.</li>
+                <li><strong>Broyage DIN 66399 (Classe P4/P5) :</strong> Lacération mécanique en micro-particules irréversibles en présence d'un contrôleur assermenté.</li>
+                <li><strong>Certificat de destruction infalsifiable :</strong> Horodatage cryptographique eIDAS, inscription dans le registre légal et réinjection de 100% de la matière dans la filière papetière française.</li>
+              </ol>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">2. Le flux de numérisation fidèle NF 544</h4>
+              <p>
+                Sur le front numérique, les scanners industriels sont calibrés chaque matin à l'aide de mires colorimétriques. Dès l'acquisition, une <strong>empreinte SHA-256</strong> est scellée par jeton d'horodatage RFC 3161 et versée dans un Système d'Archivage Électronique (SAE) certifié NF Z42-013, garantissant l'inviolabilité juridique sans aucune intervention humaine discrétionnaire.
+              </p>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-04",
-      illustrationTitle: "Radar OCAI modélisant le profil organisationnel actuel et souhaité de Xelians (Cameron & Quinn)",
-      theoreticalConcept: "Grille OCAI (Cameron & Quinn) : Competing Values Framework et cartographie culturelle"
+      ]
     },
 
     {
       id: "box-05",
       number: "05",
-      cote: "BOX-05 / HYPERCOMPÉTITION & CHRONO-STRATÉGIE",
-      title: "Rapport à la Compétition : Hypercompétition et Chrono-compétition",
-      category: "Théories de D'Aveni & Stalk",
-      status: "Fonds Stratégique R&D",
-      statusClass: "border-amber-500 text-amber-400 bg-amber-950/40",
-      barcodeNumber: "376024-XEL-05-COM",
-      summary: "Analyse de la guerre des délais en BPO (60 millions de documents/an), de la résistance face aux géants mondiaux (Iron Mountain, AWS) et de l'accélération M&A vers l'IA souveraine.",
-      keyMetrics: [
-        { label: "Documents BPO / an", value: "60 Millions" },
-        { label: "SLA Délais BPO", value: "H+4 à H+24" },
-        { label: "Investissement R&D", value: "20 % du CA" },
-        { label: "Gain Productivité IA", value: "-40 % de temps" },
-        { label: "Acquisitions Clés", value: "DIS (2023), Sodoc (2025)" },
-        { label: "Entités Récents", value: "XIS (2024), IA Générative (2026)" }
-      ],
-      sections: [
+      cote: "BOX-05",
+      title: "Rapport à la Compétition : Chrono & Hypercompétition",
+      concept: "Théories de George Stalk & Richard D'Aveni : Pivots et absorptions M&A",
+      color: "#F59E0B",
+      tag: "Compétition & M&A",
+      summary: "60 millions de documents/an en flux tendu, stratégie M&A (DIS 2023, Sodoc 2025) et IA souveraine 2026.",
+      fiches: [
         {
-          heading: "1. Chrono-compétition : Le temps comme variable d'arbitrage stratégique (George Stalk)",
+          id: "fiche-5a",
+          code: "FICHE 5A",
+          title: "Chrono-Compétition : La Guerre des Délais (BPO)",
+          subtitle: "Le temps comme variable stratégique d'arbitrage (George Stalk)",
           content: `
-<p class="mb-4 text-justify">
-Dans les théories du management stratégique fondées sur le temps (<strong>Time-Based Competition</strong> de <strong>George Stalk</strong>, 1988), la vitesse de traitement et la compression des cycles opérationnels constituent le premier facteur de différenciation concurrentielle. Chez Xelians, cette chrono-compétition s'incarne dans les plateformes de <strong>BPO (Business Process Outsourcing) documentaire</strong> :
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>Traitement de masse continu :</strong> Plus de <strong>60 millions de pages numérisées, océrisées et indexées chaque année</strong> pour le compte de banques, assurances, mutuelles et administrations publiques.</li>
-  <li><strong>Des SLA d'une exigence draconienne :</strong> Les contrats BPO imposent un traitement sous <strong>H+4 à H+24</strong> pour la prise en charge des courriers de réclamation, des pièces justificatives de crédit immobilier ou des constats de sinistres. Le non-respect de ces fenêtres temporelles déclenche des pénalités financières automatiques de plusieurs dizaines de milliers d'euros.</li>
-  <li><strong>La course technologique aux délais :</strong> Face aux fintechs et aux pure players du cloud, Xelians ne peut plus se contenter d'une numérisation différée. La captation des flux doit être quasi-synchrone avec l'émission du document.</li>
-</ul>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <p>
+                Selon la théorie de la <strong>Time-Based Competition</strong> de <strong>George Stalk</strong> (1988), la vitesse de réponse et la réduction des cycles de traitement constituent le facteur discriminant dans les marchés saturés.
+              </p>
+              <p>
+                Chez Xelians, cette chrono-compétition s'exprime dans ses centres de <strong>BPO (Business Process Outsourcing) documentaire</strong> :
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                <li><strong>Un volume industriel massif :</strong> Plus de <strong>60 millions de documents numérisés, océrisés et indexés chaque année</strong> pour des banques, mutuelles et administrations.</li>
+                <li><strong>La tyrannie des SLA en temps réel :</strong> Des fenêtres d'engagement de service ultra-courtes (traitement sous <strong>H+4 à H+24</strong>) pour les courriers de sinistres, factures fournisseurs ou dossiers de crédit immobilier. Tout retard génère des indemnités contractuelles immédiates.</li>
+                <li><strong>L'obsolescence de la numérisation différée :</strong> Face aux fintechs et aux acteurs SaaS qui capturent la donnée à la source via smartphone, Xelians a dû industrialiser ses cadences pour offrir une restitution quasi-synchrone.</li>
+              </ul>
+            </div>
+          `
         },
         {
-          heading: "2. Hypercompétition (Richard D'Aveni) et stratégie de croissance externe",
+          id: "fiche-5b",
+          code: "FICHE 5B",
+          title: "Hypercompétition & M&A Datées (DIS, XIS, Sodoc, IA)",
+          subtitle: "Acquisitions ciblées et bascule vers l'IA souveraine face aux géants",
+          illustrationRef: "ill-05",
           content: `
-<p class="mb-4 text-justify">
-Selon <strong>Richard D'Aveni</strong> (1994), l'<em>hypercompétition</em> survient lorsque les barrières traditionnelles à l'entrée s'effondrent et que les avantages concurrentiels stables deviennent éphémères. Xelians fait face à une double pression systémique :
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>L'érosion programmée de l'archivage papier physique :</strong> Bien que stable à court terme grâce à la conservation patrimoniale, le volume de papier neuf créé diminue régulièrement (-3% à -5% par an selon les secteurs). Se cantonner à l'entreposage reviendrait à gérer un déclin programmé.</li>
-  <li><strong>La menace des géants mondiaux :</strong> L'américain <em>Iron Mountain</em> pèse plus de 5 milliards de dollars de CA dans l'archivage mondial, tandis que les <em>hyperscalers du cloud</em> (Amazon Web Services, Microsoft Azure, Google Cloud) captent les flux de données brutes des grandes entreprises.</li>
-</ul>
-<p class="mb-4 text-justify">
-Pour survivre et croître dans cette arène, Xelians déploie une stratégie d'<strong>acquisitions ciblées et de diversification verticale</strong> :
-</p>
-<div class="space-y-3 mb-4">
-  <div class="p-3 bg-slate-900 border-l-4 border-sky-400 text-xs">
-    <strong class="text-white text-sm block">2023 : Rachat de DIS (Document Image Solutions)</strong>
-    Renforcement immédiat des briques d'extraction automatisée de données (LAD/RAD) et de reconnaissance sémantique assistée par ordinateur, convertissant les scanners en processeurs d'information intelligente.
-  </div>
-  <div class="p-3 bg-slate-900 border-l-4 border-blue-500 text-xs">
-    <strong class="text-white text-sm block">2024 : Lancement de Xelians Intégration Services (XIS)</strong>
-    Création d'une division dédiée à l'intégration des solutions de GED (Gestion Électronique de Documents) et de SAE auprès du secteur public et des grandes collectivités territoriales, capitalisant sur la souveraineté.
-  </div>
-  <div class="p-3 bg-slate-900 border-l-4 border-indigo-500 text-xs">
-    <strong class="text-white text-sm block">2025 : Rachat de Sodoc</strong>
-    Intégration directe de la GED souveraine Xelians dans l'environnement natif <em>Microsoft 365 / SharePoint / Teams</em>. Cette manœuvre permet d'archiver les flux de travail collaboratifs sans contraindre les utilisateurs à quitter leur environnement bureautique quotidien.
-  </div>
-  <div class="p-3 bg-slate-900 border-l-4 border-rose-500 text-xs">
-    <strong class="text-white text-sm block">2026 : Déploiement de modules d'IA Générative Souveraine</strong>
-    Consécration de <strong>20 % du chiffre d'affaires annuel à la R&D et aux infrastructures IT</strong>. Intégration de modèles de fondation open-source hébergés localement dans les datacenters souverains pour la synthèse automatique de dossiers juridiques volumineux et la classification instantanée des courriers, apportant un <strong>gain de productivité mesuré de 40 %</strong> sur les chaînes de tri BPO.
-  </div>
-</div>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <p>
+                Selon <strong>Richard D'Aveni</strong> (1994), l'<em>hypercompétition</em> se caractérise par des ruptures permanentes et l'effondrement des barrières traditionnelles. Xelians doit résister au rouleau compresseur mondial de l'archivage physique (<em>Iron Mountain</em>, 5 Md$ de CA) et aux hyperscalers cloud américains (AWS, Azure, Google Cloud).
+              </p>
+              <p>
+                Pour échapper à la commoditisation, Xelians a opéré une mutation stratégique par acquisitions successives :
+              </p>
+
+              <div class="space-y-3 my-3">
+                <div class="p-3 bg-amber-50/70 border-l-4 border-amber-500 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">2023 : Acquisition de DIS (Document Image Solutions)</strong>
+                  <p class="text-xs text-slate-600 mt-1">Rachat d'une brique clé d'extraction automatique de data (RAD/LAD) pour booster l'automatisation sémantique des flux de numérisation BPO.</p>
+                </div>
+                <div class="p-3 bg-blue-50/70 border-l-4 border-blue-500 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">2024 : Lancement de Xelians Intégration Services (XIS)</strong>
+                  <p class="text-xs text-slate-600 mt-1">Division d'intégration de solutions logicielles souveraines (notamment Maarch Courrier et SAE) pour les ministères et les grandes collectivités territoriales.</p>
+                </div>
+                <div class="p-3 bg-indigo-50/70 border-l-4 border-indigo-500 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">2025 : Rachat de Sodoc</strong>
+                  <p class="text-xs text-slate-600 mt-1">Intégration native de la GED souveraine dans l'écosystème <em>Microsoft 365 / SharePoint / Teams</em>. Ce pont permet aux clients d'archiver légalement sans changer d'environnement bureautique.</p>
+                </div>
+                <div class="p-3 bg-purple-50/70 border-l-4 border-purple-500 rounded">
+                  <strong class="text-[#0F0D2D] text-sm block">2026 : Déploiement d'IA Générative Souveraine</strong>
+                  <p class="text-xs text-slate-600 mt-1">Intégration de modèles de fondation hébergés en datacenters souverains, finançant un <strong>gain estimé de 40 % sur le traitement des courriers entrants</strong> grâce aux <strong>20 % du CA consacrés à la R&D/IT</strong>.</p>
+                </div>
+              </div>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-05",
-      illustrationTitle: "Frise chronologique et cartographie stratégique des acquisitions M&A du groupe Xelians (2004 - 2026)",
-      theoreticalConcept: "Chrono-compétition (Stalk) & Hypercompétition (D'Aveni) : adaptation par pivots technologiques"
+      ]
     },
 
     {
       id: "box-06",
       number: "06",
-      cote: "BOX-06 / L'INTRAPRENEURIAT : FREINS & PROPOSITIONS",
-      title: "La Place pour l'Intrapreneuriat : Du Carcan Normatif à l'Atelier X-Lab",
-      category: "Innovation & Dynamique RH",
-      status: "Projet Prototype Actif",
-      statusClass: "border-emerald-500 text-emerald-400 bg-emerald-950/40",
-      barcodeNumber: "376024-XEL-06-INT",
-      summary: "Diagnostic de la rigidité bureaucratique et proposition d'un dispositif de rupture : l'Atelier X-Lab (concours semestriel, 15% de temps détaché, incubateur d'IA et éco-responsabilité).",
-      keyMetrics: [
-        { label: "Propension Spontanée", value: "Faible (Carcan ISO/NF)" },
-        { label: "Temps Détaché X-Lab", value: "15 % (1 trimestre)" },
-        { label: "Budget Amorçage", value: "25 000 € / projet" },
-        { label: "Cibles de Recyclage", value: "100 % papier revalorisé" },
-        { label: "Bénéficiaires", value: "Archivistes, BPO, Devs" },
-        { label: "Rythme de Session", value: "Semestriel (2 promos/an)" }
-      ],
-      sections: [
+      cote: "BOX-06",
+      title: "L'Intrapreneuriat : Diagnostic & X-Arch Lab",
+      concept: "Zones d'incertitude (Crozier) & Dispositif de rupture managériale",
+      color: "#10B981",
+      tag: "Innovation & RH",
+      summary: "Diagnostic des freins normatifs et création du challenge semestriel « X-Arch Innovation Lab ».",
+      fiches: [
         {
-          heading: "1. Diagnostic sociologique : Les freins structurels à l'innovation ascendante",
+          id: "fiche-6a",
+          code: "FICHE 6A",
+          title: "L'Intrapreneuriat : Diagnostic de l'Existant",
+          subtitle: "Pourquoi la conformité étouffe la prise de risque spontanée",
           content: `
-<p class="mb-4 text-justify">
-L'intrapreneuriat – défini comme la capacité d'un salarié à se comporter en entrepreneur au sein d'une structure existante pour développer un nouveau produit, service ou processus – se heurte chez Xelians à un <strong>plafond de verre normatif</strong>. 
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>La tyrannie de l'audit permanent :</strong> Les certifications NF Z40-350, ISO 27001 et HDS impliquent des audits inopinés et annuels où chaque écart à la procédure écrite est consigné comme une « non-conformité majeure ». Dans ce cadre, toute initiative spontanée ou tentative d'optimisation non validée par la Direction Qualité est perçue comme un facteur de risque insensé.</li>
-  <li><strong>Le compartimentage des métiers :</strong> Comme l'a théorisé <strong>Michel Crozier</strong> dans son analyse des zones d'incertitude et des systèmes bureaucratiques, les agents s'enferment dans la stricte définition de leur poste pour se protéger. L'archiviste en entrepôt échange rarement avec l'ingénieur en traitement d'images ou le commercial grands comptes.</li>
-  <li><strong>L'inhibition de la prise de risque :</strong> Le système de rétribution interne valorise la conformité parfaite aux SLA et l'absence d'incident, plutôt que l'expérimentation exploratoire.</li>
-</ul>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">Les freins structurels à l'innovation ascendante</h4>
+              <p>
+                L'intrapreneuriat – la capacité d'un salarié à porter un projet novateur au sein de l'entreprise – est aujourd'hui <strong>quasiment inexistant de manière spontanée chez Xelians</strong>. Cette atrophie s'explique par trois facteurs sociologiques identifiés sur le terrain :
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                <li><strong>La tyrannie de l'audit permanent :</strong> Les audits annuels ISO, HDS et NF consignent tout écart à la procédure comme une anomalie critique. L'audace ou l'expérimentation spontanée y est mécaniquement perçue comme un facteur de risque inacceptable.</li>
+                <li><strong>Le cloisonnement des univers métier (Michel Crozier) :</strong> L'archiviste d'entrepôt, l'opérateur de scanner, le consultant d'affaires et le développeur cloud travaillent dans des silos étanches et ne disposent d'aucun canal informel pour faire émerger des synergies.</li>
+                <li><strong>L'absence de droit à l'erreur :</strong> Le système de rétribution et d'évaluation valorise le zéro défaut et la tenue des délais contractuels, mais ne récompense pas l'exploration risquée d'idées nouvelles.</li>
+              </ul>
+            </div>
+          `
         },
         {
-          heading: "2. Dispositif de rupture préconisé : « L'Atelier X-Lab »",
+          id: "fiche-6b",
+          code: "FICHE 6B",
+          title: "Dispositif Proposé : « X-Arch Innovation Lab »",
+          subtitle: "Challenge semestriel, 10% de temps banalisé et prototypage souverain",
           content: `
-<p class="mb-4 text-justify">
-Pour libérer le potentiel d'innovation sans fragiliser le socle de sécurité documentaire, nous préconisons la mise en place formelle d'un incubateur interne : <strong>« L'Atelier X-Lab »</strong>. Ce dispositif institutionnalise une zone d'agilité contrôlée, affranchie temporairement des contraintes bureaucratiques habituelles.
-</p>
-<div class="p-4 bg-slate-900 rounded-lg border border-emerald-500/60 my-4">
-  <h4 class="font-bold text-emerald-400 text-base mb-2">Modalités et Architecture de l'Atelier X-Lab :</h4>
-  <div class="space-y-3 text-xs text-slate-300">
-    <div class="flex items-start gap-2">
-      <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 rounded font-mono font-bold">1</span>
-      <div><strong>Concours d'idéation semestriel universel :</strong> Tout collaborateur (manutentionnaire de dépôt, opérateur BPO, archiviste, chef de projet logiciel) peut déposer une proposition de prototype en réponse à un défi métier concret. Deux sessions par an (printemps / automne).</div>
-    </div>
-    <div class="flex items-start gap-2">
-      <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 rounded font-mono font-bold">2</span>
-      <div><strong>Détachement protégé de 15 % du temps de travail :</strong> Les lauréats (3 équipes de 2 à 4 personnes par promotion) bénéficient d'une décharge officielle de 15 % de leur temps de travail contractuel durant un trimestre entier pour incuber leur projet.</div>
-    </div>
-    <div class="flex items-start gap-2">
-      <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 rounded font-mono font-bold">3</span>
-      <div><strong>Financement et parrainage d'élite :</strong> Enveloppe d'amorçage de <strong>25 000 €</strong> allouée par la Direction Générale et tutorat direct par un Lead Développeur IA de la R&D et un membre du Comité Exécutif.</div>
-    </div>
-  </div>
-</div>
-`
-        },
-        {
-          heading: "3. Deux projets pilotes immédiats pour l'Atelier X-Lab",
-          content: `
-<div class="grid md:grid-cols-2 gap-4 mb-4">
-  <div class="p-4 bg-slate-900/90 rounded border border-slate-700">
-    <h5 class="text-sky-400 font-bold text-sm mb-2">Pilote 1 : Brique IA de Reconnaissance Paléographique & Manuscrits</h5>
-    <p class="text-xs text-slate-300 text-justify">
-      Développement par un binôme archiviste / ingénieur IA d'un modèle de vision par ordinateur local (offline) capable de retranscrire automatiquement des fonds d'archives manuscrites des XIXe et XXe siècles (minutes notariales, registres de délibérations communales). Ce service ouvre un nouveau marché à haute valeur ajoutée auprès des généalogistes et des collectivités sans rompre la souveraineté.
-    </p>
-  </div>
-  <div class="p-4 bg-slate-900/90 rounded border border-slate-700">
-    <h5 class="text-emerald-400 font-bold text-sm mb-2">Pilote 2 : Boucle Circulaire « Zéro Déchet Cellulose »</h5>
-    <p class="text-xs text-slate-300 text-justify">
-      Conçu par des opérateurs de destruction certifiée : valoriser les 100 % de pulpe de papier sécurisée broyée lors des opérations de pilonnage confidentiel pour concevoir des cartons de conservation d'archives écologiques, fabriqués en France, certifiés pH neutre et sans acide, refermant une boucle d'économie circulaire vertueuse.
-    </p>
-  </div>
-</div>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">Architecture du dispositif préconisé</h4>
+              <p>
+                Pour stimuler l'intrapreneuriat sans ébranler la chaîne de confiance et de sécurité, nous proposons la mise en place officielle du <strong>« X-Arch Innovation Lab »</strong> :
+              </p>
+
+              <div class="p-4 bg-emerald-50 border border-emerald-300 rounded-lg space-y-2 text-sm text-slate-700 my-3">
+                <div class="flex items-start gap-2">
+                  <span class="px-2 py-0.5 rounded bg-emerald-700 text-white font-mono text-xs font-bold">1</span>
+                  <p><strong>Challenge semestriel universel :</strong> Concours d'idéation ouvert à tous les collaborateurs (opérateurs de numérisation, archivistes de dépôt, chefs de projet IT, consultants) pour résoudre un irritant métier ou imaginer un nouveau service.</p>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="px-2 py-0.5 rounded bg-emerald-700 text-white font-mono text-xs font-bold">2</span>
+                  <p><strong>10 % de temps banalisé pendant un trimestre :</strong> Les équipes lauréates sont officiellement déchargées d'une demi-journée par semaine sur leur temps de travail pour prototyper leur solution.</p>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="px-2 py-0.5 rounded bg-emerald-700 text-white font-mono text-xs font-bold">3</span>
+                  <p><strong>Budget d'amorçage et parrainage exécutif :</strong> Dotation de 15 000 € à 25 000 € par projet et tutorat direct par un membre du Comité Exécutif et un Lead Développeur IA de la R&D.</p>
+                </div>
+              </div>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">Deux projets pilotes concrets pour le X-Arch Lab</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-2">
+                <div class="p-3 bg-white border border-slate-200 rounded shadow-sm">
+                  <strong class="text-emerald-700 text-sm block">Projet 1 : IA Paléographique Souveraine</strong>
+                  <p class="text-xs text-slate-600 mt-1">Modèle de vision offline développé en binôme archiviste/data engineer pour transcrire automatiquement des registres cadastraux ou actes d'état civil anciens manuscrits sans rupture de souveraineté.</p>
+                </div>
+                <div class="p-3 bg-white border border-slate-200 rounded shadow-sm">
+                  <strong class="text-emerald-700 text-sm block">Projet 2 : Réemploi 100% Déchets Cellulose</strong>
+                  <p class="text-xs text-slate-600 mt-1">Valorisation intégrale de la pulpe de papier broyée lors des destructions certifiées pour fabriquer les propres cartons de conservation d'archives de Xelians en circuit court éco-responsable.</p>
+                </div>
+              </div>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-04",
-      illustrationTitle: "Modélisation de l'impact souhaité de l'Atelier X-Lab sur le quadrant Adhocratie",
-      theoreticalConcept: "Dynamique d'innovation ascendante, zones d'incertitude (Crozier) et organisation ambidextre"
+      ]
     },
 
     {
       id: "box-07",
       number: "07",
-      cote: "BOX-07 / BILAN CRITIQUE & PERSPECTIVES D'AVENIR",
-      title: "Bilan Critique et Perspectives : Forteresse Souveraine vs Agilité SaaS",
-      category: "Synthèse Stratégique & Prospective",
-      status: "Conclusion de Recherche",
-      statusClass: "border-sky-500 text-sky-400 bg-sky-950/40",
-      barcodeNumber: "376024-XEL-07-SYN",
-      summary: "Bilan stratégique global : la souveraineté documentaire et la confiance du CAC 40 constituent un rempart inattaquable, mais le risque de sclérose face aux pure players du cloud exige une ambidextrie organisationnelle.",
-      keyMetrics: [
-        { label: "Pénétration CAC 40", value: "36 / 40 (90 %)" },
-        { label: "Souveraineté", value: "100 % France Métropolitaine" },
-        { label: "Risque Majeur", value: "Piège de la Compétence" },
-        { label: "Modèle Préconisé", value: "Organisation Ambidextre" },
-        { label: "Croissance Cible", value: "+12 % par an (IT/BPO)" },
-        { label: "Pérennité Modèle", value: "Hybridation Physique / Numérique" }
-      ],
-      sections: [
+      cote: "BOX-07",
+      title: "Bilan Critique & Perspectives Stratégiques",
+      concept: "Piège de la compétence (Levitt & March) & Organisation Ambidextre",
+      color: "#0EBCFF",
+      tag: "Synthèse & Avenir",
+      summary: "36 entreprises du CAC 40 sur 40, risque de sclérose face au cloud et recommandation d'ambidextrie.",
+      fiches: [
         {
-          heading: "1. Atout ou fragilité face aux mutations du marché ?",
+          id: "fiche-7a",
+          code: "FICHE 7A",
+          title: "Bilan Critique : Atout Souverain ou Fragilité Bureaucratique ?",
+          subtitle: "La théorie de l'organisation ambidextre (O'Reilly & Tushman)",
           content: `
-<p class="mb-4 text-justify">
-Au terme de cette analyse sociologique et stratégique approfondie, la culture de Xelians – caractérisée par l'inviolabilité procédurale, la sanctuarisation de la preuve et la suprématie de la hiérarchie – apparaît comme une <strong>lame à double tranchant</strong> :
-</p>
-<div class="grid md:grid-cols-2 gap-4 mb-4">
-  <div class="p-4 bg-emerald-950/30 rounded border border-emerald-500/80">
-    <div class="flex items-center gap-2 mb-2 text-emerald-400 font-bold">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      L'Atout Stratégique : La Forteresse de Confiance Souveraine
-    </div>
-    <p class="text-xs text-slate-300 text-justify">
-      Dans une époque minée par les cyberattaques, les rançongiciels et les craintes légitimes d'extraterritorialité juridique (Cloud Act et FISA américains), Xelians propose un rempart inviolable. Les <strong>36 entreprises du CAC 40</strong> et les ministères de souveraineté ne choisissent pas Xelians pour sa fantaisie marketing, mais parce que son refus du compromis et ses 26 sites agréés SIAF garantissent une sécurité juridique absolue. Cette culture de la rigueur forme une barrière à l'entrée quasi-infranchissable pour les nouveaux entrants.
-    </p>
-  </div>
-  <div class="p-4 bg-rose-950/30 rounded border border-rose-500/80">
-    <div class="flex items-center gap-2 mb-2 text-rose-400 font-bold">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-      La Fragilité Structurelle : Le Piège de la Compétence (Levitt & March)
-    </div>
-    <p class="text-xs text-slate-300 text-justify">
-      Enfermée dans l'excellence de son métier historique d'archivage physique, l'organisation risque de succomber au <em>piège de la compétence</em> (competency trap) théorisé par Barbara Levitt et James March. Si Xelians applique aux projets logiciels agiles et à l'IA la même inertie de vérification et de contre-signature que celle requise pour la garde d'un carton pendant 30 ans, elle sera inéluctablement dépassée en vélocité par les éditeurs SaaS américains et les scale-ups européennes qui itèrent en sprints hebdomadaires.
-    </p>
-  </div>
-</div>
-`
-        },
-        {
-          heading: "2. Recommandation prospective : La théorie de l'organisation ambidextre (O'Reilly & Tushman)",
-          content: `
-<p class="mb-4 text-justify">
-Pour concilier ces deux impératifs apparemment irréconciliables, la réponse organisationnelle réside dans le déploiement d'une <strong>structure organisationnelle ambidextre</strong> (Charles O'Reilly & Michael Tushman, 1996) :
-</p>
-<ul class="list-disc pl-6 mb-4 space-y-2 text-slate-300">
-  <li><strong>Le bras d'Exploitation (La Forteresse Documentaire) :</strong> Maintien et renforcement intransigeant du modèle hiérarchique, des normes NF Z40-350, ISO 27001 et SIAF sur les 29 dépôts et les 3 datacenters. Ce pôle assure la rentabilité récurrente, la trésorerie et la confiance inébranlable des 36 fleurons du CAC 40.</li>
-  <li><strong>Le bras d'Exploration (Le Hub Logiciel & IA) :</strong> Octroi d'une autonomie culturelle, spatiale et managériale réelle aux entités tech (Xelians Intégration Services, filiales logicielles, R&D). Ce pôle doit adopter des modes de gouvernance adhocratiques (méthodes agiles, rituels de rétroaction rapide, droit à l'erreur mesuré) pour rivaliser avec la vélocité des géants mondiaux.</li>
-</ul>
-<p class="mb-4 text-justify">
-C'est à cette unique condition d'hybridation équilibrée que Xelians convertira sa devise – <em>« Plus que des données, votre avenir »</em> – en un avantage concurrentiel durable pour le demi-siècle à venir.
-</p>
-`
+            <div class="space-y-4 text-slate-800 leading-relaxed text-justify">
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2">1. L'Atout Décisif : La Forteresse de Confiance Souveraine</h4>
+              <p>
+                La culture du contrôle et de la conformité de Xelians constitue un rempart concurrentiel inestimable. À l'heure du <em>Cloud Act</em> américain, des risques d'extraterritorialité juridique et des cyberattaques de masse, les <strong>36 entreprises du CAC 40 sur 40</strong> qui confient leurs archives à Xelians ne cherchent pas l'effet de mode, mais la <strong>certitude juridique absolue</strong>. Ses 26 sites agréés SIAF et ses 3 datacenters en France représentent une barrière à l'entrée impossible à répliquer rapidement pour un nouvel entrant.
+              </p>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">2. La Fragilité : Le « Piège de la Compétence » (Levitt & March)</h4>
+              <p>
+                Enfermée dans l'excellence de son métier historique d'archivage physique, Xelians encourt le risque du <em>piège de la compétence</em> (competency trap) théorisé par Barbara Levitt et James March. Si l'organisation applique aux développements logiciels agiles et aux modèles d'IA générative la même lenteur décisionnelle et les mêmes cascades de visas que pour l'entreposage d'un carton pendant 30 ans, elle sera inévitablement distancée par la vélocité des scale-ups SaaS européennes et américaines qui déploient en production plusieurs fois par semaine.
+              </p>
+
+              <h4 class="font-bold text-lg text-[#0F0D2D] border-b pb-2 pt-2">3. Recommandation prospective : L'Organisation Ambidextre</h4>
+              <p>
+                Pour conjuguer rigueur patrimoniale et vélocité technologique, nous préconisons la mise en œuvre d'une <strong>structure organisationnelle ambidextre</strong> (Charles O'Reilly & Michael Tushman, 1996) :
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                <li><strong>Le pôle d'Exploitation (La Forteresse) :</strong> Maintien intransigeant de la culture hiérarchique, des normes NF Z40-350 et des audits stricts sur les 29 dépôts et 3 datacenters, assurant la rentabilité récurrente et la confiance des clients régaliens.</li>
+                <li><strong>Le pôle d'Exploration (Le Hub Logiciel & IA) :</strong> Octroi d'une réelle autonomie managériale et spatiale aux filiales logicielles (Xelians Intégration Services, R&D IA) avec gouvernance agile, sprints courts et tolérance mesurée à l'erreur pour rivaliser avec la chrono-compétition internationale.</li>
+              </ul>
+            </div>
+          `
         }
-      ],
-      illustrationRef: "ill-05",
-      illustrationTitle: "Synthèse prospective de l'ambidextrie organisationnelle : équilibre Forteresse & Vélocité Logicielle",
-      theoreticalConcept: "Théorie de l'Organisation Ambidextre (O'Reilly & Tushman) & Piège de la compétence (March)"
+      ]
     }
   ],
 
@@ -604,88 +604,46 @@ C'est à cette unique condition d'hybridation équilibrée que Xelians convertir
       id: "ill-01",
       number: 1,
       title: "Plan architectural & vue en coupe d'un site de stockage haute sécurité certifié NF Z40-350 / ISO 27001",
-      cartonId: "box-01",
-      legend: "Source : Xelians Présentation Corporate 2026 — Notion de cours : Artefacts physiques & sanctuarisation de Schein",
-      description: "Coupe technique d'un bâtiment de conservation haute sécurité Xelians : sas biométrique étanche, régulation hygrométrique 50% HR, système d'extinction par gaz inerte Novec/Inergen, rayonnages mobiles automatisés grande hauteur et confinement anti-intrusion de classe P3."
+      source: "Doc Institutionnel Xelians 2026",
+      courseConcept: "Artefacts physiques selon Schein",
+      legend: "Source : Doc Institutionnel Xelians 2026 — Notion de cours : Artefacts physiques selon Schein",
+      description: "Coupe technique d'un site de conservation haute sécurité Xelians : sas biométrique, régulation 50% HR / 18°C, système d'extinction par gaz inerte (Inergen/Novec), rayonnages mobiles automatisés (9 000 km) et datacenters souverains HDS."
     },
     {
       id: "ill-02",
       number: 2,
-      title: "Charte chromatique officielle Xelians et sémiologie du logo à boucle infinie",
-      cartonId: "box-02",
-      legend: "Source : Charte de style Xelians 2019 — Notion de cours : Artefacts symboliques et transmission des valeurs",
-      description: "Décomposition chromatique officielle (Bleu ciel #0EBCFF, Bleu roi #1464FF, Bleu nuit #241F63, Sombre support #0F0D2D, Accent Framboise #FF4A54) et analyse du logotype en boucle d'infinité stylisée figurant la pérennité du cycle de vie documentaire."
+      title: "Le Logo Xelians & Symbole Infini (Charte de Style 2019)",
+      source: "Charte de Style 2019",
+      courseConcept: "Artefact symbolique",
+      legend: "Source : Charte de Style 2019 — Notion de cours : Artefact symbolique",
+      description: "Dégradé officiel (Bleu ciel #0EBCFF vers Bleu roi #1464FF et Accent framboise #FF4A54) et analyse sémiologique de la boucle infinie symbolisant le cycle de vie perpétuel du document."
     },
     {
       id: "ill-03",
       number: 3,
-      title: "Le voilier de course au large Mini 6.50 sponsorisé par Xelians (Skippers Caroline Boule & Benoît Marie)",
-      cartonId: "box-03",
-      legend: "Source : Xelians RSE & Innovation 2026 — Notion de cours : Valeurs déclarées vs image externe de dépassement",
-      description: "Le prototype Mini 6.50 à foils aux couleurs de Xelians en vol au-dessus de l'eau. Vecteur métaphorique projetant l'agilité, la haute technologie et le dépassement de soi en contrepoint à la pesanteur historique des 9 000 km d'archives physiques."
+      title: "Le Mini 6.50 à Foils sponsorisé par Xelians (Caroline Boule & Benoît Marie)",
+      source: "Sponsoring RSE 2026",
+      courseConcept: "Valeurs affichées vs identité métier",
+      legend: "Source : Sponsoring RSE 2026 — Notion de cours : Valeurs affichées vs identité métier",
+      description: "Prototype Mini 6.50 à foils aux couleurs de Xelians en sustentation au-dessus des vagues. Symbole d'agilité et de haute technologie en contrepoint à la masse physique des 9 000 km d'archives."
     },
     {
       id: "ill-04",
       number: 4,
       title: "Radar OCAI modélisant le profil organisationnel de Xelians (Cameron & Quinn)",
-      cartonId: "box-04",
-      legend: "Analyse OCAI d'après la grille de Cameron & Quinn — Notion de cours : Diagnostic de culture organisationnelle",
-      description: "Modélisation en radar des quatre quadrants du Competing Values Framework : hyper-dominance Hiérarchique (42%) et forte composante Marché (28%), confrontées au profil souhaité pour relever le défi de l'IA (Adhocratie à 30%)."
+      source: "Modèle Cameron & Quinn",
+      courseConcept: "Profil Hiérarchie & Marché",
+      legend: "Source : Modèle Cameron & Quinn — Notion de cours : Profil Hiérarchie & Marché",
+      description: "Radar OCAI : hyper-dominance Hiérarchique (42%) et composante Marché (28%), avec comparatif interactif entre culture réelle et culture affichée."
     },
     {
       id: "ill-05",
       number: 5,
-      title: "Frise chronologique et cartographie stratégique des acquisitions M&A du groupe Xelians (2004 - 2026)",
-      cartonId: "box-05",
-      legend: "Source : Document Institutionnel 2026 — Notion de cours : Chrono-compétition et adaptation stratégique",
-      description: "Évolution de la trajectoire du groupe : de la conservation pure (Archiveco 1977 / Locarchives 1982) au BPO (Scaneco 2004, CD-Doc 2017), à l'extraction automatisée (DIS 2023), à l'intégration M365 (Sodoc 2025) et à l'IA générative souveraine 2026 financée par 20% de CA en R&D."
-    }
-  ],
-
-  glossary: [
-    {
-      term: "DUA (Durée d'Utilité Administrative)",
-      def: "Période pendant laquelle un document d'archive doit être conservé dans un état permettant son utilisation immédiate à des fins juridiques, contentieuses ou administratives. Déterminée par la législation française (Code de commerce, Code civil, Code du travail)."
-    },
-    {
-      term: "Valeur Probante",
-      def: "Propriété conférée à un document électronique lui permettant de produire les mêmes effets juridiques et probatoires qu'un original papier devant un tribunal (article 1366 du Code civil français)."
-    },
-    {
-      term: "NF Z40-350 / Marque NF 342",
-      def: "Norme française homologuée d'exigence pour les prestations de gestion et de conservation d'archives physiques (bâtiments, climatisation, sécurité incendie, traçabilité des boîtes)."
-    },
-    {
-      term: "NF Z42-026 / Marque NF 544",
-      def: "Norme définissant les conditions de numérisation fidèle des documents sur support papier, garantissant la conformité de la copie numérique et l'intégrité de l'empreinte cryptographique."
-    },
-    {
-      term: "SIAF (Service Interministériel des Archives de France)",
-      def: "Autorité de tutelle étatique relevant du Ministère de la Culture, délivrant l'agrément obligatoire pour conserver des archives publiques courantes et intermédiaires des ministères et administrations."
-    },
-    {
-      term: "HDS (Hébergeur de Données de Santé)",
-      def: "Certification obligatoire délivrée selon le référentiel de l'Agence du Numérique en Santé (ANS) pour tout prestataire hébergeant des données médicales à caractère personnel."
-    },
-    {
-      term: "SAE (Système d'Archivage Électronique) NF Z42-013",
-      def: "Système informatique hautement sécurisé assurant la pérennité, la confidentialité, l'intégrité et la lisibilité des archives électroniques sur de très longues périodes."
-    },
-    {
-      term: "Modèle de Schein (1985)",
-      def: "Théorie de sociologie des organisations structurant la culture en trois strates superposées : 1) Les artefacts visibles, 2) Les valeurs affichées, 3) Les présupposés fondamentaux inconscients."
-    },
-    {
-      term: "Modèle OCAI de Cameron & Quinn",
-      def: "Organizational Culture Assessment Instrument : grille d'évaluation des cultures d'entreprise répartissant les postures sur quatre quadrants : Clan, Adhocratie, Hiérarchie, Marché."
-    },
-    {
-      term: "Chrono-compétition (George Stalk)",
-      def: "Approche stratégique selon laquelle la rapidité de traitement de l'information et la compression des délais d'exécution constituent l'avantage concurrentiel déterminant face aux rivaux."
-    },
-    {
-      term: "Organisation Ambidextre (O'Reilly & Tushman)",
-      def: "Capacité d'une entreprise à mener de front deux dynamiques contradictoires : l'exploitation efficiente de son cœur de métier historique et l'exploration risquée d'innovations de rupture."
+      title: "Frise Chronologique des Rapprochements et Stratégie M&A (2004 - 2026)",
+      source: "Historique Xelians 2026",
+      courseConcept: "Chrono-compétition et adaptation",
+      legend: "Source : Historique Xelians 2026 — Notion de cours : Chrono-compétition et adaptation",
+      description: "Pivots stratégiques : Archiveco/Locarchives (1977-1982), Scaneco (2004), CD-Doc (2017), Xelians (2019), DIS (2023), XIS (2024), Sodoc (2025) et IA Souveraine (2026)."
     }
   ]
 };

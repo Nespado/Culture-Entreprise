@@ -1,10 +1,10 @@
 /* ==========================================================================
-   STYLE OFFICIEL XELIANS & INTERFACE ACADÉMIQUE « CARTONS D'ARCHIVES »
-   Charte chromatique : #0EBCFF, #1464FF, #241F63, #0F0D2D, #FF4A54, #F7F9FE
-   Typographie : Muli (Google Fonts)
+   DIRECTION ARTISTIQUE : HABBO HOTEL x HANGAR D'ARCHIVAGE ISOMÉTRIQUE
+   Charte Xelians : #0EBCFF, #1464FF, #241F63, #0F0D2D, #FF4A54, #F7F9FE
+   Typographie : Mulish (Google Fonts)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --xelians-sky: #0EBCFF;
@@ -14,158 +14,208 @@
   --xelians-accent: #FF4A54;
   --xelians-bg-light: #F7F9FE;
   
-  --font-muli: 'Mulish', 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 body {
-  font-family: var(--font-muli);
-  background-color: var(--xelians-dark);
+  font-family: var(--font-sans);
+  background-color: #0B0D18;
   color: #F1F5F9;
   overflow-x: hidden;
 }
 
-/* Trame de fond subtile façon grille de stockage d'archives */
-.bg-archival-grid {
-  background-color: #0F0D2D;
+/* Grille de fond quadrillée style plan d'architecte / simulation */
+.bg-iso-grid {
+  background-color: #090B14;
   background-image: 
-    linear-gradient(to right, rgba(14, 188, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 188, 255, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-/* Rayonnage métallique d'archives */
-.shelf-rack {
-  position: relative;
-  border-bottom: 12px solid #1E293B;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.1);
-}
-
-.shelf-rack::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #0EBCFF, #1464FF, #0EBCFF);
-  opacity: 0.4;
+    radial-gradient(rgba(14, 188, 255, 0.08) 1px, transparent 0),
+    linear-gradient(to right, rgba(20, 100, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 100, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
 }
 
 /* ==========================================================================
-   CARTON D'ARCHIVES MODULAIRE (MÉTAPHORE VISUELLE & 3D ISOMÉTRIQUE)
+   SCÈNE ISOMÉTRIQUE & CARTONS INTERACTIFS (STYLE HABBO)
    ========================================================================== */
 
-.archive-box-card {
+.iso-warehouse-container {
   position: relative;
-  background: linear-gradient(145deg, #18153f 0%, #110e33 60%, #0d0b28 100%);
-  border: 1px solid rgba(20, 100, 255, 0.25);
-  border-radius: 8px;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
-  perspective: 1000px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.archive-box-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, var(--xelians-sky), var(--xelians-royal));
-  opacity: 0.8;
-  transition: opacity 0.3s ease, height 0.3s ease;
-}
-
-/* Texture subtile de carton kraft d'archive renforcé */
-.box-kraft-texture {
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background-size: 16px 16px, 100% 100%;
-}
-
-/* Effets de survol sur le carton d'archives */
-.archive-box-card:hover {
-  transform: translateY(-8px) scale(1.015);
-  border-color: var(--xelians-sky);
-  box-shadow: 0 20px 35px -8px rgba(14, 188, 255, 0.35), 0 0 20px rgba(14, 188, 255, 0.2);
-}
-
-.archive-box-card:hover::before {
-  opacity: 1;
-  height: 8px;
-}
-
-/* Poignée de préhension du carton d'archives */
-.box-handle {
-  width: 72px;
-  height: 18px;
-  background-color: #0b0920;
-  border: 2px solid #2d266a;
-  border-radius: 9px;
-  margin: 0 auto;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
-  position: relative;
-}
-
-.box-handle::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 6px;
-  right: 6px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-}
-
-/* Code-barres stylisé */
-.barcode-strip {
-  background: repeating-linear-gradient(
-    90deg,
-    #0EBCFF,
-    #0EBCFF 2px,
-    transparent 2px,
-    transparent 4px,
-    #0EBCFF 4px,
-    #0EBCFF 7px,
-    transparent 7px,
-    transparent 9px,
-    #0EBCFF 9px,
-    #0EBCFF 10px,
-    transparent 10px,
-    transparent 13px
-  );
-  height: 26px;
   width: 100%;
-  opacity: 0.85;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(14, 188, 255, 0.1);
+  border: 1px solid rgba(20, 100, 255, 0.3);
+  background: #0D101E;
 }
 
-/* Tampon "VU / AUDITÉ" */
-.stamp-audited {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  border: 2px solid #10B981;
-  border-radius: 4px;
-  color: #10B981;
-  font-family: monospace;
-  font-weight: 800;
+/* Cartons isométriques interactifs */
+.iso-box-group {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+}
+
+.iso-box-group:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 12px 16px rgba(14, 188, 255, 0.45));
+}
+
+.iso-box-group.active-box {
+  transform: translateY(-12px);
+  filter: drop-shadow(0 14px 20px rgba(14, 188, 255, 0.7));
+}
+
+/* Bulle de dialogue Habbo Hotel */
+.habbo-bubble {
+  position: absolute;
+  pointer-events: none;
+  background: #0F0D2D;
+  border: 2px solid var(--xelians-sky);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
   font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transform: rotate(-3deg);
-  background: rgba(16, 185, 129, 0.1);
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 10px rgba(14, 188, 255, 0.3);
+  transform: translate(-50%, -100%);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 30;
+}
+
+.habbo-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: var(--xelians-sky) transparent transparent;
+  display: block;
+  width: 0;
 }
 
 /* ==========================================================================
-   BISEAU CARACTÉRISTIQUE XELIANS À 4°
-   Signature officielle de la charte de style en pied de page
+   TIROIR DÉPLOYÉ DES FICHES SUSPENDUES (SORTANT DU CARTON)
+   ========================================================================== */
+
+.hanging-folder-card {
+  position: relative;
+  background: linear-gradient(135deg, #181E36 0%, #111425 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--xelians-sky);
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hanging-folder-card:hover {
+  transform: translateX(4px);
+  background: linear-gradient(135deg, #222B4D 0%, #171B32 100%);
+  border-color: var(--xelians-sky);
+  box-shadow: 0 4px 12px rgba(14, 188, 255, 0.2);
+}
+
+.hanging-folder-card.read {
+  border-left-color: #10B981;
+}
+
+/* Onglet de chemise suspendue */
+.folder-tab {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   VOLET DE LECTURE CENTRAL (NET, BLANC, MINIMALISTE ET TRÈS LISIBLE)
+   Confort de lecture optimal garanti pour le professeur évaluateur
+   ========================================================================== */
+
+.reader-drawer-overlay {
+  background-color: rgba(11, 13, 24, 0.75);
+  backdrop-filter: blur(8px);
+  transition: opacity 0.25s ease;
+}
+
+.reader-sheet {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 820px;
+  width: 100%;
+}
+
+.academic-reading-text {
+  font-family: var(--font-sans);
+  color: #1E293B !important;
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+
+.academic-reading-text blockquote {
+  color: #0F172A !important;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.academic-reading-text p {
+  color: #334155 !important;
+  margin-bottom: 1.15rem;
+  text-align: justify;
+}
+
+.academic-reading-text strong {
+  color: #0F172A !important;
+  font-weight: 800;
+}
+
+.academic-reading-text em {
+  color: #0284C7 !important;
+  font-style: italic;
+}
+
+.academic-reading-text h4 {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F0D2D !important;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.4rem;
+}
+
+.academic-reading-text ul, .academic-reading-text ol {
+  color: #334155 !important;
+}
+
+.academic-reading-text li strong {
+  color: #0F172A !important;
+}
+}
+
+/* ==========================================================================
+   PIED DE PAGE AVEC BISEAU CARACTÉRISTIQUE À 4°
    ========================================================================== */
 
 .xelians-bevel-container {
@@ -176,136 +226,46 @@ body {
 
 .xelians-bevel-edge {
   position: absolute;
-  top: -48px;
+  top: -44px;
   left: 0;
   right: 0;
-  height: 52px;
+  height: 48px;
   background-color: var(--xelians-dark);
   clip-path: polygon(0 100%, 100% 0%, 100% 100%);
   border-top: 3px solid var(--xelians-sky);
 }
 
-/* ==========================================================================
-   MODALE DOSSIER D'ARCHIVES
-   ========================================================================== */
-
-.dossier-modal-backdrop {
-  background-color: rgba(15, 13, 45, 0.85);
-  backdrop-filter: blur(10px);
-}
-
-.dossier-modal-container {
-  background: linear-gradient(160deg, #18153F 0%, #110E33 100%);
-  border: 1px solid rgba(14, 188, 255, 0.4);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px rgba(14, 188, 255, 0.15);
-  border-radius: 10px;
-}
-
-/* Onglets du dossier */
-.dossier-tab-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #94A3B8;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  background: transparent;
-}
-
-.dossier-tab-btn:hover {
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.dossier-tab-btn.active {
-  color: var(--xelians-sky) !important;
-  border-bottom-color: var(--xelians-sky) !important;
-  background: rgba(14, 188, 255, 0.12) !important;
-}
-
-/* Style de texte académique */
-.academic-prose {
-  color: #E2E8F0;
-  line-height: 1.75;
-}
-
-.academic-prose strong {
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-.academic-prose em {
-  color: var(--xelians-sky);
-  font-style: italic;
-}
-
-.academic-prose h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  border-left: 3px solid var(--xelians-sky);
-  padding-left: 0.75rem;
-}
-
-.academic-prose p {
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-/* Scrollbar personnalisée aux couleurs Xelians */
+/* Scrollbar personnalisée */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0920;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #241F63;
+  background: #94A3B8;
   border-radius: 4px;
-  border: 1px solid rgba(14, 188, 255, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--xelians-sky);
 }
 
-/* ==========================================================================
-   RÉGLAGES D'IMPRESSION (SUPPORT ACADÉMIQUE SUR PAPIER / PDF)
-   ========================================================================== */
-
+/* Print queries pour impression propre de la fiche académique */
 @media print {
   body {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-  }
-  
-  .no-print {
-    display: none !important;
-  }
-
-  .archive-box-card {
-    break-inside: avoid;
-    border: 1px solid #CCC !important;
-    box-shadow: none !important;
     background: #FFFFFF !important;
     color: #000000 !important;
   }
-
-  .academic-prose {
-    color: #000000 !important;
+  .no-print {
+    display: none !important;
   }
-
-  .xelians-bevel-edge {
-    display: none;
+  .reader-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
   }
 }

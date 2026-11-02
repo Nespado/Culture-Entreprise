@@ -27,6 +27,7 @@ window.XELIANS_DATA = {
   cartons: [
     {
       id: "box-01",
+      habboCoords: { x: 31.7, y: 36.1, width: 4.8, height: 6.2 },
       number: "01",
       cote: "BOX-01",
       title: "Ce qui se voit : Les Artefacts visibles",
@@ -121,6 +122,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-02",
+      habboCoords: { x: 44.5, y: 23.4, width: 4.8, height: 6.2 },
       number: "02",
       cote: "BOX-02",
       title: "Ce que l'entreprise dit d'elle-même : Les 4 Valeurs",
@@ -253,6 +255,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-03",
+      habboCoords: { x: 47.2, y: 46.2, width: 5.2, height: 6.5 },
       number: "03",
       cote: "BOX-03",
       title: "Ce qui se vit réellement : Présupposé & Dissonance",
@@ -329,6 +332,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-04",
+      habboCoords: { x: 49.3, y: 55.2, width: 4.8, height: 6.2 },
       number: "04",
       cote: "BOX-04",
       title: "Diagnostic sur la Grille OCAI (Cameron & Quinn)",
@@ -416,6 +420,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-05",
+      habboCoords: { x: 63.1, y: 32.4, width: 5.2, height: 6.5 },
       number: "05",
       cote: "BOX-05",
       title: "Rapport à la Compétition : Chrono & Hypercompétition",
@@ -486,6 +491,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-06",
+      habboCoords: { x: 53.2, y: 83.9, width: 6.0, height: 7.5 },
       number: "06",
       cote: "BOX-06",
       title: "L'Intrapreneuriat : Diagnostic & X-Arch Lab",
@@ -559,6 +565,7 @@ window.XELIANS_DATA = {
 
     {
       id: "box-07",
+      habboCoords: { x: 69.4, y: 79.7, width: 6.0, height: 7.5 },
       number: "07",
       cote: "BOX-07",
       title: "Bilan Critique & Perspectives Stratégiques",

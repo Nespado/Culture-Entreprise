@@ -400,7 +400,11 @@ window.XELIANS_ILLUSTRATIONS = {
   initOcaiChart: function(containerId, mode) {
     const canvasId = 'ocaiCanvas_' + containerId.replace(/[^a-zA-Z0-9_-]/g, '_');
     const canvas = document.getElementById(canvasId);
-    if (!canvas || typeof Chart === 'undefined') return;
+    if (!canvas) return;
+    if (typeof Chart === 'undefined') {
+      setTimeout(() => this.initOcaiChart(containerId, mode), 60);
+      return;
+    }
 
     if (this.ocaiInstances[containerId]) {
       this.ocaiInstances[containerId].destroy();

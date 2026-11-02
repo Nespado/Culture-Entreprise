@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XELIANS : Hangar d'Archivage Isométrique & Analyse Sociologique</title>
-  <meta name="description" content="Évaluation académique Master 2 (notée sur 20) : Analyse sociologique de la culture d'entreprise Xelians. Scène isométrique 2.5D Habbo Hotel, cartons d'archives et fiches d'étude.">
+  <title>XELIANS : Hangar d'Archivage Habbo Hotel & Analyse Organisationnelle</title>
+  <meta name="description" content="Audit organisationnel Master 2 (noté sur 20) de Xelians sous forme d'entrepôt d'archivage isométrique rétro style Habbo Hotel. Exploration interactive des cartons et fiches suspendues.">
 
-  <!-- Google Fonts : Mulish (Muli) -->
+  <!-- Google Fonts : Mulish -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -29,215 +29,232 @@
           },
           fontFamily: {
             sans: ['Mulish', 'sans-serif'],
-            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
           }
         }
       }
     }
   </script>
 
-  <!-- Chart.js pour le Radar OCAI -->
+  <!-- Chart.js pour le Radar OCAI de Cameron & Quinn -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- Feuilles de style personnalisées (Habbo Hotel x Isométrie) -->
+  <!-- Feuilles de style Habbo Hotel x Isométrie Xelians -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-iso-grid min-h-screen flex flex-col text-slate-100 antialiased selection:bg-[#0EBCFF] selection:text-[#0F0D2D]">
+<body class="h-full w-full bg-black text-slate-100 flex flex-col overflow-hidden select-none font-sans">
 
-  <!-- BANDEAU SUPÉRIEUR INSTITUTIONNEL & ACADÉMIQUE -->
-  <header class="border-b border-slate-800 bg-[#0A0C16]/95 backdrop-blur sticky top-0 z-40 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-y-3">
-      <!-- Métadonnées de soutenance Master 2 -->
-      <div id="academic-meta-header"></div>
-
-      <!-- Navigation & Identité Xelians -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
-        
-        <!-- Logo officiel & Titre du projet -->
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-[#0F0D2D] p-1.5 border border-sky-500/40 flex items-center justify-center shadow-lg shadow-sky-500/10">
-            <!-- Logo Xelians boucle infinie officiel -->
-            <img src="assets/logo_xelians.svg" alt="Xelians" class="h-6 w-auto" onerror="this.outerHTML='<span class=\'text-sky-400 font-black text-xs\'>XEL</span>'">
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-lg font-black tracking-wider text-white">XELIANS</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                HANGAR D'ARCHIVAGE 2.5D
-              </span>
-            </div>
-            <p class="text-xs text-slate-400">
-              Analyse Sociologique & Stratégique • Direction : Habbo Hotel x Simulation
-            </p>
-          </div>
-        </div>
-
-        <!-- Recherche rapide & Contrôle Son -->
-        <div class="flex items-center gap-2">
-          
-          <!-- Champ de recherche live sur toutes les fiches -->
-          <div class="relative w-48 sm:w-64">
-            <input type="text" id="search-input" oninput="app.onSearch(this.value)" placeholder="Rechercher (ex: DUA, SIAF, M&A)..." 
-                   class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 font-sans transition">
-            <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          </div>
-
-          <!-- Bouton Sonore Rétro -->
-          <button id="sound-toggle-btn" onclick="app.toggleSound()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-xs text-slate-400 border border-slate-700 transition flex items-center gap-1.5 font-mono" title="Activer les retours sonores rétro">
-            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
-            <span>Sons : OFF</span>
-          </button>
-
-        </div>
+  <!-- ==========================================================================
+       HABBO TOP HUD : BANDEAU SUPÉRIEUR RÉGLAGES & SALLE HABBO
+       ========================================================================== -->
+  <header class="h-14 bg-[#0A0C16] border-b-2 border-[#1E293B] px-3 sm:px-6 flex items-center justify-between z-30 shrink-0 shadow-lg">
+    
+    <!-- Logo & Titre de la Salle Habbo -->
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded bg-[#0F0D2D] border border-sky-400/40 p-1 flex items-center justify-center shadow">
+        <img src="assets/logo_xelians.svg" alt="Xelians" class="h-5 w-auto" onerror="this.outerHTML='<span class=\'text-sky-400 font-black text-xs\'>XEL</span>'">
       </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-black tracking-wide text-white">XELIANS</span>
+          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">
+            HANGAR 29-SIAF // HABBO HOTEL
+          </span>
+        </div>
+        <p class="text-[11px] text-slate-400 hidden sm:block">
+          Audit Organisationnel M2 • Cliquez sur un carton pour zoomer et l'ouvrir
+        </p>
+      </div>
+    </div>
+
+    <!-- Contrôles Rétro : Recherche, Progression de l'Audit, Son -->
+    <div class="flex items-center gap-2 sm:gap-4">
+      
+      <!-- Recherche Live -->
+      <div class="relative w-36 sm:w-56">
+        <input type="text" id="habbo-search-input" oninput="app.onSearch(this.value)" placeholder="Rechercher..." 
+               class="w-full pl-7 pr-2 py-1 rounded bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 font-mono transition">
+        <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+
+      <!-- Barre de Progression d'Audit Style Habbo -->
+      <div class="hidden md:flex items-center gap-2 bg-slate-900 border border-slate-800 px-3 py-1 rounded">
+        <span class="text-[10px] font-mono font-bold text-sky-300 uppercase">Audit</span>
+        <div class="w-24 h-2.5 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+          <div id="habbo-progress-fill" class="h-full bg-gradient-to-r from-sky-400 to-blue-600 transition-all duration-300" style="width: 0%;"></div>
+        </div>
+        <span id="habbo-progress-text" class="text-[10px] font-mono text-slate-300">0/14</span>
+      </div>
+
+      <!-- Bouton Sonore Rétro (Web Audio API) -->
+      <button id="sound-btn" onclick="app.toggleSound()" class="habbo-btn px-2.5 py-1 rounded text-xs text-slate-300 flex items-center gap-1 font-mono" title="Activer / Couper le son rétro">
+        <span id="sound-icon">🔊</span>
+        <span class="hidden sm:inline text-[11px]" id="sound-label">ON</span>
+      </button>
+
     </div>
   </header>
 
-  <!-- SUIVI DE PROGRESSION D'AUDIT POUR LE PROFESSEUR -->
-  <section class="bg-[#0C0F1D] border-b border-slate-800/80 py-2 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-      <div class="flex items-center gap-2.5 font-mono text-slate-300">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span id="audit-counter-label">Audit de récolement : <strong>0 / 14</strong> fiches examinées (0%)</span>
-      </div>
-      <div class="flex items-center gap-3 w-full sm:w-64">
-        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden border border-slate-700">
-          <div id="audit-counter-bar" class="bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-400 h-full w-0 transition-all duration-300"></div>
-        </div>
-        <button onclick="app.resetAudit()" class="text-[10px] text-slate-400 hover:text-rose-400 underline font-mono">Reset</button>
-      </div>
-    </div>
-  </section>
+  <!-- ==========================================================================
+       HABBO WAREHOUSE STAGE : SCÈNE ISOMÉTRIQUE PRINCIPALE (habbo.png)
+       ========================================================================== -->
+  <main id="habbo-stage-container" class="flex-grow relative">
+    
+    <!-- Scène Habbo avec l'image habbo.png et les 7 cartons interactifs -->
+    <div id="habbo-stage" class="relative">
+      
+      <!-- Image d'arrière-plan haute définition Habbo Warehouse -->
+      <img src="assets/habbo.png" alt="Hangar d'Archivage Habbo Hotel" class="w-full h-full block object-contain pointer-events-none select-none">
 
-  <!-- CONTENU PRINCIPAL : SCÈNE ISOMÉTRIQUE & PLATEAU DE FICHES -->
-  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+      <!-- Conteneur des 7 cartons interactifs positionnés avec précision -->
+      <div id="carton-hotspots-layer" class="absolute inset-0"></div>
 
-    <!-- En-tête scénographique -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-      <div>
-        <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-widest block mb-1">
-          SIMULATION 2.5D • HANGAR DE STOCKAGE SOUVERAIN
-        </span>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
-          Allée Principale d'Archivage Haute Sécurité
-        </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl mt-1">
-          Survolez un carton beige pour prévisualiser son contenu. Cliquez pour l'ouvrir et faire émerger ses chemises suspendues d'analyse sociologique.
-        </p>
-      </div>
-
-      <!-- Dock rapide de sélection de carton -->
-      <div id="quick-inventory-dock" class="w-full md:w-auto"></div>
-    </div>
-
-    <!-- 1. LA SCÈNE ISOMÉTRIQUE (STYLE HABBO HOTEL) -->
-    <div class="iso-warehouse-container">
-      <div id="iso-scene-canvas-container" class="relative">
-        <!-- Rendu dynamique SVG par app.js -->
-      </div>
-    </div>
-
-    <!-- 2. TRAY DES FICHES SUSPENDUES SORTANT DU CARTON -->
-    <div id="hanging-folders-tray">
-      <!-- Rendu dynamique par app.js -->
     </div>
 
   </main>
 
   <!-- ==========================================================================
-       VOLET DE LECTURE CENTRAL (NET, BLANC, MINIMALISTE ET TRÈS LISIBLE)
-       Garantissant un confort de lecture optimal pour le professeur évaluateur
+       HABBO BOTTOM HOTBAR : INVENTAIRE & BISEAU XELIANS À 4°
        ========================================================================== -->
-  <div id="fiche-reading-drawer" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 reader-drawer-overlay overflow-y-auto">
-    <div class="reader-sheet p-6 sm:p-10 my-auto max-h-[92vh] flex flex-col overflow-hidden border border-slate-200">
+  <footer class="xelians-bevel-bar shrink-0 z-30 pt-1 pb-2 px-3 sm:px-6">
+    <!-- Biseau officiel incliné à 4° -->
+    <div class="xelians-bevel-angle"></div>
+
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 pt-1 text-xs">
       
-      <!-- En-tête épuré blanc de la fiche -->
-      <div id="reading-sheet-header" class="mb-4"></div>
+      <!-- Dock de raccourcis rapides des 7 cartons -->
+      <div class="flex items-center gap-1 overflow-x-auto max-w-full pb-1 sm:pb-0 font-mono text-[11px]" id="habbo-carton-dock"></div>
 
-      <!-- Corps de lecture académique avec défilement fluide -->
-      <div id="reading-sheet-body" class="overflow-y-auto flex-grow pr-2 space-y-6"></div>
+      <!-- Données environnementales du hangar -->
+      <div class="hidden lg:flex items-center gap-3 text-[11px] font-mono text-slate-400">
+        <span class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>19.2°C • 48% HR</span>
+        </span>
+        <span>|</span>
+        <span class="text-sky-400">NF Z40-350 // SIAF</span>
+        <span>|</span>
+        <span>36/40 CAC 40</span>
+      </div>
 
-      <!-- Pied de page de la fiche -->
-      <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-500 no-print">
-        <span>Navigation : <kbd class="px-1.5 py-0.5 rounded bg-slate-100 border text-slate-700">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-slate-100 border text-slate-700">→</kbd> | <kbd class="px-1.5 py-0.5 rounded bg-slate-100 border text-slate-700">Échap</kbd></span>
-        <button onclick="app.closeFicheReader()" class="px-4 py-2 rounded-lg bg-[#0F0D2D] hover:bg-slate-800 text-white font-bold transition">
-          Fermer la fiche
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       HERO ZOOMED CARTON MODAL : CARTON D'ARCHIVES GRAND FORMAT QUI S'OUVRE
+       ========================================================================== -->
+  <div id="zoomed-box-modal" class="fixed inset-0 z-40 hidden flex-col items-center justify-center p-4">
+    
+    <!-- Bandeau de navigation au-dessus du carton zoomé -->
+    <div class="mb-4 text-center z-20 max-w-xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#0F0D2D] border border-sky-500/50 text-sky-400 font-mono text-xs mb-1">
+        <span id="zoomed-box-badge">BOX-01</span>
+        <span>•</span>
+        <span id="zoomed-box-concept">Niveau 1 de Schein</span>
+      </div>
+      <h2 id="zoomed-box-title" class="text-xl sm:text-2xl font-black text-white">Ce qui se voit : Les Artefacts visibles</h2>
+      <p class="text-xs text-slate-300 mt-1">
+        📦 Carton ouvert : Cliquez sur une fiche suspendue pour l'extraire et la lire entièrement.
+      </p>
+    </div>
+
+    <!-- Le Carton 3D Isométrique qui s'ouvre -->
+    <div class="hero-box-wrapper">
+      <div id="archival-hero-box" class="archival-box is-open">
+        
+        <!-- Rabats supérieurs du carton qui s'ouvrent en 3D -->
+        <div class="archival-box-flap flap-top-left"></div>
+        <div class="archival-box-flap flap-top-right"></div>
+
+        <!-- Intérieur creux du carton avec rails métalliques -->
+        <div class="archival-box-interior">
+          <div class="hanging-rail-left"></div>
+          <div class="hanging-rail-right"></div>
+
+          <!-- Dossiers suspendus (Fiches) nichés dans le carton -->
+          <div id="zoomed-box-folders" class="hanging-folders-container"></div>
+        </div>
+
+        <!-- Face avant du carton avec le logo Xelians et la cote -->
+        <div class="archival-box-front">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded bg-[#0F0D2D] p-1 border border-slate-700 flex items-center justify-center shadow">
+              <img src="assets/logo_xelians.svg" alt="Xelians" class="h-6 w-auto">
+            </div>
+            <div>
+              <div id="box-front-cote" class="font-mono font-black text-sm text-[#0F0D2D]">BOX-01 / ARTEFACTS</div>
+              <div class="font-mono text-[10px] text-slate-800">SIAF CONFORME • NF 342 • DUA AUDITÉ</div>
+            </div>
+          </div>
+          <!-- Poignée découpée sur le carton -->
+          <div class="cutout-handle"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Boutons d'action sous le carton -->
+    <div class="mt-6 flex items-center gap-3 z-20">
+      <button onclick="app.closeZoomedBox()" class="habbo-btn px-5 py-2.5 rounded text-xs font-mono font-bold text-white flex items-center gap-2">
+        <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        <span>Refermer le carton & Retour au Hangar (Échap)</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       FICHE READING MODAL : LECTURE PLEIN ÉCRAN ÉPURÉE (BLANC MINIMALISTE PROF)
+       ========================================================================== -->
+  <div id="fiche-reader-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6">
+    <div class="reader-white-sheet p-6 sm:p-10 my-auto">
+      
+      <!-- En-tête de la fiche de lecture -->
+      <div class="flex items-start justify-between gap-4 border-b border-slate-200 pb-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span id="reader-fiche-code" class="px-2 py-0.5 rounded bg-sky-100 text-sky-800 font-mono font-bold text-xs">FICHE 1A</span>
+            <span id="reader-fiche-carton" class="text-xs font-mono text-slate-500">CARTON 01</span>
+            <span class="text-xs text-slate-400">•</span>
+            <span id="reader-fiche-time" class="text-xs font-mono text-slate-500">⏱ ~4 min</span>
+          </div>
+          <h1 id="reader-fiche-title" class="text-xl sm:text-2xl font-black text-[#0F0D2D]">Les Gigas-Hangars & La Sanctuarisation Architecturale</h1>
+          <p id="reader-fiche-subtitle" class="text-xs sm:text-sm text-slate-600 mt-0.5 font-medium">L'empreinte matérielle d'une forteresse documentaire</p>
+        </div>
+
+        <!-- Bouton Fermer pour replacer la fiche dans le carton -->
+        <button onclick="app.closeFicheReader()" class="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-mono font-bold transition flex items-center gap-1.5 shrink-0" title="Replacer la fiche dans le carton (Échap)">
+          <span>Replacer dans le carton</span>
+          <span class="text-base leading-none">✕</span>
         </button>
+      </div>
+
+      <!-- Corps académique Bac+5 complet avec défilement -->
+      <div id="reader-fiche-body" class="overflow-y-auto flex-grow my-4 pr-3 academic-body"></div>
+
+      <!-- Pied de page de navigation entre fiches -->
+      <div class="pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-500">
+        <div class="flex items-center gap-2">
+          <button id="reader-prev-btn" onclick="app.navigateFiche(-1)" class="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition">
+            ← Fiche précédente
+          </button>
+          <button id="reader-next-btn" onclick="app.navigateFiche(1)" class="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition">
+            Fiche suivante →
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label class="flex items-center gap-1.5 cursor-pointer select-none">
+            <input type="checkbox" id="reader-read-checkbox" onchange="app.toggleReadStatus(this.checked)" class="rounded text-sky-600 focus:ring-sky-500">
+            <span class="text-slate-700">Fiche lue</span>
+          </label>
+        </div>
       </div>
 
     </div>
   </div>
-
-  <!-- ==========================================================================
-       PIED DE PAGE AVEC BISEAU CARACTÉRISTIQUE À 4° ET FOND SOMBRE #0F0D2D
-       ========================================================================== -->
-  <footer class="xelians-bevel-container pt-8 pb-10 mt-16 relative no-print">
-    <!-- Biseau officiel incliné à 4° -->
-    <div class="xelians-bevel-edge"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4 space-y-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs text-slate-400 border-b border-slate-800 pb-6">
-        
-        <div>
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-lg font-black text-white">XELIANS</span>
-            <span class="w-2 h-2 rounded-full bg-[#0EBCFF]"></span>
-          </div>
-          <p class="leading-relaxed">
-            Tier-archivage physique patrimonial et solutions logicielles de confiance numérique souveraine.
-          </p>
-          <div class="text-[11px] font-mono text-sky-400 mt-2">
-            « More than data, business »
-          </div>
-        </div>
-
-        <div>
-          <span class="font-mono text-xs text-sky-300 font-bold uppercase block mb-1.5">Charte Chromatique</span>
-          <div class="grid grid-cols-5 gap-1 max-w-[180px]">
-            <div class="h-5 rounded bg-[#0EBCFF]" title="#0EBCFF Bleu ciel"></div>
-            <div class="h-5 rounded bg-[#1464FF]" title="#1464FF Bleu roi"></div>
-            <div class="h-5 rounded bg-[#241F63]" title="#241F63 Bleu nuit"></div>
-            <div class="h-5 rounded bg-[#0F0D2D] border border-slate-700" title="#0F0D2D Sombre"></div>
-            <div class="h-5 rounded bg-[#FF4A54]" title="#FF4A54 Framboise"></div>
-          </div>
-          <p class="text-[10px] text-slate-500 mt-1 font-mono">Biseau incliné à 4° officiel.</p>
-        </div>
-
-        <div>
-          <span class="font-mono text-xs text-sky-300 font-bold uppercase block mb-1.5">Cadre Académique</span>
-          <p>
-            Évaluation notée sur 20 • Master 2 Stratégie d'Entreprise & Sociologie des Organisations.
-          </p>
-          <p class="text-emerald-400 mt-1 font-mono text-[11px]">
-            14 Fiches rédigées • 5 Illustrations obligatoires
-          </p>
-        </div>
-
-        <div>
-          <span class="font-mono text-xs text-sky-300 font-bold uppercase block mb-1.5">Références Théoriques</span>
-          <ul class="space-y-0.5 text-[11px]">
-            <li>• Edgar Schein (1985) : Les 3 Niveaux</li>
-            <li>• Cameron & Quinn (1999) : Grille OCAI</li>
-            <li>• Michel Crozier : Zones d'incertitude</li>
-            <li>• George Stalk : Chrono-compétition</li>
-            <li>• Richard D'Aveni : Hypercompétition</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-400">
-        <div>
-          © 2026 XELIANS — Soutenance Académique Master 2. Tous droits réservés.
-        </div>
-        <div class="flex items-center gap-3 text-[11px]">
-          <span class="text-sky-400">3 Datacenters Souverains (France)</span>
-          <span>•</span>
-          <span>NF Z40-350 / HDS / ISO 27001 / SIAF</span>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Scripts applicatifs -->
   <script src="js/data.js"></script>

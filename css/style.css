@@ -107,95 +107,71 @@
 }
 
 /* --------------------------------------------------------------------------
-   Carton Hotspots on Habbo Warehouse
+   Isometric SVG Contours & Hotspots on Habbo Warehouse
    -------------------------------------------------------------------------- */
-.carton-hotspot {
-  position: absolute;
+.carton-iso-group {
   cursor: pointer;
-  z-index: 10;
-  transition: transform 0.15s ease;
 }
 
-.carton-hotspot:hover {
-  z-index: 20;
+.carton-iso-poly {
+  fill: rgba(14, 188, 255, 0.08);
+  stroke: rgba(14, 188, 255, 0.65);
+  stroke-width: 2px;
+  stroke-dasharray: 4, 3;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.carton-hotspot:hover .habbo-bubble {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1);
+.carton-iso-edge {
+  stroke: rgba(14, 188, 255, 0.45);
+  stroke-width: 1.5px;
+  stroke-dasharray: 3, 3;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.carton-hotspot-box {
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  border: 2px dashed rgba(14, 188, 255, 0.4);
-  background: rgba(14, 188, 255, 0.08);
-  transition: all 0.2s ease;
+.carton-iso-group:hover .carton-iso-poly {
+  fill: rgba(14, 188, 255, 0.35);
+  stroke: #0EBCFF;
+  stroke-width: 3px;
+  stroke-dasharray: none;
+  filter: drop-shadow(0 0 10px #0EBCFF);
 }
 
-.carton-hotspot:hover .carton-hotspot-box {
-  border: 2px solid #0EBCFF;
-  background: rgba(14, 188, 255, 0.25);
-  box-shadow: 0 0 16px rgba(14, 188, 255, 0.65), inset 0 0 8px rgba(14, 188, 255, 0.3);
-  transform: scale(1.05);
+.carton-iso-group:hover .carton-iso-edge {
+  stroke: #0EBCFF;
+  stroke-width: 2px;
+  stroke-dasharray: none;
+  filter: drop-shadow(0 0 6px #0EBCFF);
 }
 
-/* Floating Habbo Badge Pill */
-.carton-tag-pill {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #0F0D2D;
-  color: #0EBCFF;
-  border: 1px solid #0EBCFF;
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 10px;
-  font-weight: 800;
-  white-space: nowrap;
-  box-shadow: 1px 1px 0 #000000;
-  animation: tagBob 2.4s ease-in-out infinite;
+.carton-iso-tag {
+  pointer-events: none;
+  transition: transform 0.2s ease;
 }
 
-@keyframes tagBob {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-4px); }
-}
-
-/* Search Match Highlight */
-.carton-search-match .carton-hotspot-box {
-  border: 2px solid #facc15 !important;
-  background: rgba(250, 204, 21, 0.35) !important;
-  box-shadow: 0 0 20px #facc15 !important;
-  animation: searchPulse 1.2s infinite alternate !important;
-}
-
-@keyframes searchPulse {
-  from { transform: scale(1); box-shadow: 0 0 10px #facc15; }
-  to { transform: scale(1.1); box-shadow: 0 0 24px #facc15; }
+.carton-iso-group:hover .carton-iso-tag {
+  transform: translateY(-4px);
 }
 
 /* --------------------------------------------------------------------------
    Warehouse Stage & Camera Zoom Transitions
    -------------------------------------------------------------------------- */
 #habbo-stage-container {
-  position: relative;
+  flex: 1 1 0%;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 4rem);
   overflow: hidden;
   background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #habbo-stage {
   position: relative;
-  width: 100%;
-  max-width: 1672px;
+  width: min(100vw, calc((100vh - 4rem) * 1672 / 941));
+  height: min(calc(100vh - 4rem), calc(100vw * 941 / 1672));
   aspect-ratio: 1672 / 941;
   transform-origin: 50% 50%;
   transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.75s ease;
@@ -492,25 +468,6 @@
 .academic-cartouche strong {
   color: #0F0D2D;
   font-family: ui-monospace, SFMono-Regular, monospace;
-}
-
-/* --------------------------------------------------------------------------
-   Signature 4° Bevel Edge (Xelians Official)
-   -------------------------------------------------------------------------- */
-.xelians-bevel-bar {
-  background: #0F0D2D;
-  position: relative;
-  border-top: 2px solid #241F63;
-}
-
-.xelians-bevel-angle {
-  position: absolute;
-  top: -12px;
-  left: 0;
-  right: 0;
-  height: 12px;
-  background: #0F0D2D;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
 /* --------------------------------------------------------------------------

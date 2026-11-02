@@ -1,7 +1,7 @@
 /**
  * APPLICATION FRONTEND XELIANS : HABBO HOTEL ARCHIVAL WAREHOUSE
  * Reproduction fidèle de l'ambiance Habbo Hotel (habbo.png)
- * Scène 2.5D isométrique, zoom héroïque sur carton, ouverture 3D et lecture intégrale
+ * Scène 2.5D isométrique, contours SVG 100% fidèles aux cartons, zoom héroïque et lecture intégrale
  */
 
 class XeliansHabboApp {
@@ -12,16 +12,14 @@ class XeliansHabboApp {
     this.readFiches = new Set(JSON.parse(localStorage.getItem('xelians_read_fiches') || '[]'));
     this.audioEnabled = true;
     this.audioCtx = null;
-    this.searchQuery = '';
 
     this.init();
   }
 
   init() {
-    this.initHabboHotspots();
-    this.renderHabboDock();
-    this.updateProgressCounter();
+    this.initHabboIsometricContours();
     this.bindEvents();
+    this.setupCalibrationHelper();
 
     // Support des paramètres URL pour accès direct (?box=box-01 ou ?fiche=fiche-1a)
     const params = new URLSearchParams(window.location.search);
@@ -62,7 +60,6 @@ class XeliansHabboApp {
       const now = this.audioCtx.currentTime;
 
       if (type === 'hover') {
-        // Petit bip rétro aigu
         osc.type = 'sine';
         osc.frequency.setValueAtTime(680, now);
         osc.frequency.exponentialRampToValueAtTime(820, now + 0.03);
@@ -71,7 +68,6 @@ class XeliansHabboApp {
         osc.start(now);
         osc.stop(now + 0.035);
       } else if (type === 'zoom') {
-        // Bruit de zoom caméra / déplacement rapide
         osc.type = 'triangle';
         osc.frequency.setValueAtTime(140, now);
         osc.frequency.exponentialRampToValueAtTime(420, now + 0.22);
@@ -80,7 +76,6 @@ class XeliansHabboApp {
         osc.start(now);
         osc.stop(now + 0.25);
       } else if (type === 'open-box') {
-        // Ouverture du carton (dépliage des rabats)
         osc.type = 'sawtooth';
         osc.frequency.setValueAtTime(220, now);
         osc.frequency.linearRampToValueAtTime(180, now + 0.08);
@@ -90,7 +85,6 @@ class XeliansHabboApp {
         osc.start(now);
         osc.stop(now + 0.2);
       } else if (type === 'paper') {
-        // Glissement papier d'un dossier suspendu
         osc.type = 'sine';
         osc.frequency.setValueAtTime(360, now);
         osc.frequency.exponentialRampToValueAtTime(740, now + 0.09);
@@ -99,7 +93,6 @@ class XeliansHabboApp {
         osc.start(now);
         osc.stop(now + 0.11);
       } else if (type === 'close') {
-        // Fermeture carton
         osc.type = 'triangle';
         osc.frequency.setValueAtTime(380, now);
         osc.frequency.exponentialRampToValueAtTime(120, now + 0.15);
@@ -128,28 +121,56 @@ class XeliansHabboApp {
   }
 
   /**
-   * Création des 7 cartons interactifs sur la scène Habbo Hotel
+   * Création des 7 contours isométriques SVG fidèles aux cartons de habbo.png
    */
-  initHabboHotspots() {
-    const layer = document.getElementById('carton-hotspots-layer');
-    if (!layer) return;
+  initHabboIsometricContours() {
+    const svgLayer = document.getElementById('carton-hotspots-svg');
+    const bubblesLayer = document.getElementById('habbo-speech-bubbles-layer');
+    if (!svgLayer) return;
 
-    layer.innerHTML = this.data.cartons.map(b => `
-      <div id="hotspot-${b.id}" class="carton-hotspot" 
-           style="left: ${b.habboCoords.x}%; top: ${b.habboCoords.y}%; width: ${b.habboCoords.width}%; height: ${b.habboCoords.height}%;"
-           onmouseenter="app.playSound('hover')" 
-           onclick="app.zoomToBox('${b.id}')">
-        
-        <!-- Boîte de contour lumineuse isométrique -->
-        <div class="carton-hotspot-box"></div>
+    let svgHtml = '';
+    let bubblesHtml = '';
 
-        <!-- Étiquette volante Habbo avec identifiant de cote -->
-        <div class="carton-tag-pill" style="border-color: ${b.color}; color: ${b.color};">
-          ${b.cote}
-        </div>
+    this.data.cartons.forEach(b => {
+      const poly = b.isoBox.poly;
+      const center = b.isoBox.center;
+      const pointsStr = poly.map(p => p.join(',')).join(' ');
 
-        <!-- Bulle de dialogue Habbo Hotel authentique au survol -->
-        <div class="habbo-bubble">
+      // Sommet supérieur du carton pour placer le badge et la bulle
+      const topX = poly[0][0];
+      const topY = poly[0][1];
+
+      // Groupe SVG interactif pour chaque carton
+      svgHtml += `
+        <g id="iso-box-${b.id}" class="carton-iso-group" 
+           onclick="app.zoomToBox('${b.id}')" 
+           onmouseenter="app.onBoxHover('${b.id}')" 
+           onmouseleave="app.onBoxLeave('${b.id}')">
+          
+          <!-- Silhouette polygonale isométrique 3D du carton -->
+          <polygon points="${pointsStr}" class="carton-iso-poly" style="stroke: ${b.color};" />
+
+          <!-- Arêtes internes 3D qui se rejoignent au sommet central -->
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[0][0]}" y2="${poly[0][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[3][0]}" y2="${poly[3][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[1][0]}" y2="${poly[1][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+          <line x1="${center[0]}" y1="${center[1]}" x2="${poly[4][0]}" y2="${poly[4][1]}" class="carton-iso-edge" style="stroke: ${b.color};" />
+
+          <!-- Étiquette volante Habbo stylisée -->
+          <g transform="translate(${topX}, ${topY - 14})" class="carton-iso-tag">
+            <rect x="-24" y="-12" width="48" height="16" rx="4" fill="#0F0D2D" stroke="${b.color}" stroke-width="1.5" />
+            <text x="0" y="0" fill="${b.color}" font-family="ui-monospace, monospace" font-size="10" font-weight="800" text-anchor="middle" dominant-baseline="middle">${b.cote}</text>
+          </g>
+
+        </g>
+      `;
+
+      // Bulle de dialogue Habbo Hotel positionnée au sommet du carton
+      const pctLeft = ((topX / 1672) * 100).toFixed(2);
+      const pctTop = ((topY / 941) * 100).toFixed(2);
+
+      bubblesHtml += `
+        <div id="bubble-${b.id}" class="habbo-bubble" style="left: ${pctLeft}%; top: ${pctTop}%;">
           <div class="flex items-center gap-1.5 font-bold text-xs" style="color: ${b.color};">
             <span>📦</span>
             <span>${b.cote} : ${b.title}</span>
@@ -161,27 +182,28 @@ class XeliansHabboApp {
             [ Cliquer pour zoomer et ouvrir ]
           </div>
         </div>
+      `;
+    });
 
-      </div>
-    `).join('');
+    svgLayer.innerHTML = svgHtml;
+    if (bubblesLayer) bubblesLayer.innerHTML = bubblesHtml;
   }
 
-  /**
-   * Barre inférieure de raccourcis Habbo Hotel
-   */
-  renderHabboDock() {
-    const dock = document.getElementById('habbo-carton-dock');
-    if (!dock) return;
+  onBoxHover(boxId) {
+    this.playSound('hover');
+    const bubble = document.getElementById(`bubble-${boxId}`);
+    if (bubble) {
+      bubble.style.opacity = '1';
+      bubble.style.transform = 'translateX(-50%) translateY(0) scale(1)';
+    }
+  }
 
-    dock.innerHTML = this.data.cartons.map(b => `
-      <button onclick="app.zoomToBox('${b.id}')" 
-              class="habbo-btn px-2.5 py-1 rounded text-slate-300 hover:text-white flex items-center gap-1.5 shrink-0 transition"
-              title="${b.title}">
-        <span class="w-2 h-2 rounded-full" style="background-color: ${b.color};"></span>
-        <strong class="font-mono">${b.cote}</strong>
-        <span class="text-[10px] text-slate-400 font-sans hidden md:inline">${b.tag}</span>
-      </button>
-    `).join('');
+  onBoxLeave(boxId) {
+    const bubble = document.getElementById(`bubble-${boxId}`);
+    if (bubble) {
+      bubble.style.opacity = '0';
+      bubble.style.transform = 'translateX(-50%) translateY(8px) scale(0.95)';
+    }
   }
 
   /**
@@ -192,6 +214,7 @@ class XeliansHabboApp {
     if (!box) return;
 
     this.activeBoxId = boxId;
+    this.onBoxLeave(boxId);
 
     // 1. Déclenchement son et calcul du point focal
     this.playSound('zoom');
@@ -199,7 +222,7 @@ class XeliansHabboApp {
     // 2. Zoom dynamique de la scène Habbo vers les coordonnées précises du carton
     const stage = document.getElementById('habbo-stage');
     if (stage) {
-      stage.style.transformOrigin = `${box.habboCoords.x}% ${box.habboCoords.y}%`;
+      stage.style.transformOrigin = `${box.isoBox.zoomOrigin.x}% ${box.isoBox.zoomOrigin.y}%`;
       stage.style.transform = 'scale(3.2)';
       stage.classList.add('is-zoomed');
     }
@@ -227,7 +250,6 @@ class XeliansHabboApp {
       modal.classList.add('active');
     }
 
-    // Animation d'ouverture des rabats 3D
     if (heroBox) {
       heroBox.classList.add('is-open');
       this.playSound('open-box');
@@ -331,7 +353,6 @@ class XeliansHabboApp {
     // Marquer automatiquement comme lue
     this.readFiches.add(ficheId);
     localStorage.setItem('xelians_read_fiches', JSON.stringify([...this.readFiches]));
-    this.updateProgressCounter();
 
     // Remplir les métadonnées de l'en-tête de lecture
     const codeEl = document.getElementById('reader-fiche-code');
@@ -445,51 +466,40 @@ class XeliansHabboApp {
       this.readFiches.delete(this.activeFicheId);
     }
     localStorage.setItem('xelians_read_fiches', JSON.stringify([...this.readFiches]));
-    this.updateProgressCounter();
   }
 
   /**
-   * Compteur de progression d'audit
+   * Outil de calibration pour l'utilisateur :
+   * Shift + Clic sur l'entrepôt affiche et copie les coordonnées exactes [X, Y]
    */
-  updateProgressCounter() {
-    const total = 14;
-    const read = this.readFiches.size;
-    const pct = Math.round((read / total) * 100);
+  setupCalibrationHelper() {
+    const stage = document.getElementById('habbo-stage');
+    if (!stage || !stage.addEventListener) return;
 
-    const fill = document.getElementById('habbo-progress-fill');
-    const text = document.getElementById('habbo-progress-text');
+    stage.addEventListener('click', (e) => {
+      if (!e.shiftKey) return; // Actif uniquement si Shift est maintenu
 
-    if (fill) fill.style.width = `${pct}%`;
-    if (text) text.textContent = `${read}/${total} (${pct}%)`;
-  }
+      const rect = stage.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
 
-  /**
-   * Recherche instantanée
-   */
-  onSearch(query) {
-    this.searchQuery = query.toLowerCase().trim();
-    const hotspots = document.querySelectorAll('.carton-hotspot');
+      // Conversion vers le référentiel natif 1672 x 941
+      const nativeX = Math.round((clickX / rect.width) * 1672);
+      const nativeY = Math.round((clickY / rect.height) * 941);
+      const coordStr = `[${nativeX}, ${nativeY}]`;
 
-    if (!this.searchQuery) {
-      hotspots.forEach(el => el.classList.remove('carton-search-match'));
-      return;
-    }
+      console.log(`%c[CALIBRATION XELIANS] Point cliqué : ${coordStr}`, 'color: #0EBCFF; font-weight: bold;');
 
-    // Mettre en surbrillance les cartons qui contiennent le mot-clé
-    this.data.cartons.forEach(b => {
-      const match = b.fiches.some(f => 
-        f.title.toLowerCase().includes(this.searchQuery) ||
-        f.subtitle.toLowerCase().includes(this.searchQuery) ||
-        f.content.toLowerCase().includes(this.searchQuery)
-      );
+      // Toast visuel
+      const toast = document.getElementById('coord-toast');
+      if (toast) {
+        toast.textContent = `📍 Coordonnée cliquée : ${coordStr} (copié)`;
+        toast.style.opacity = '1';
+        setTimeout(() => { toast.style.opacity = '0'; }, 2200);
+      }
 
-      const el = document.getElementById(`hotspot-${b.id}`);
-      if (el) {
-        if (match) {
-          el.classList.add('carton-search-match');
-        } else {
-          el.classList.remove('carton-search-match');
-        }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(coordStr).catch(() => {});
       }
     });
   }

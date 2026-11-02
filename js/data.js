@@ -27,7 +27,13 @@ window.XELIANS_DATA = {
   cartons: [
     {
       id: "box-01",
-      habboCoords: { x: 31.7, y: 36.1, width: 4.8, height: 6.2 },
+      isoBox: {
+        // Coordonnées isométriques sur habbo.png (1672 x 941 px)
+        // Vous pouvez ajuster les sommets du contour [X, Y] ci-dessous :
+        poly: [[538, 276], [620, 316], [620, 376], [538, 416], [456, 376], [456, 316]],
+        center: [538, 356],
+        zoomOrigin: { x: 32.2, y: 36.8 }
+      },
       number: "01",
       cote: "BOX-01",
       title: "Ce qui se voit : Les Artefacts visibles",
@@ -122,7 +128,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-02",
-      habboCoords: { x: 44.5, y: 23.4, width: 4.8, height: 6.2 },
+      isoBox: {
+        poly: [[766, 194], [820, 222], [820, 268], [766, 296], [712, 268], [712, 222]],
+        center: [766, 250],
+        zoomOrigin: { x: 45.8, y: 26.1 }
+      },
       number: "02",
       cote: "BOX-02",
       title: "Ce que l'entreprise dit d'elle-même : Les 4 Valeurs",
@@ -255,7 +265,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-03",
-      habboCoords: { x: 47.2, y: 46.2, width: 5.2, height: 6.5 },
+      isoBox: {
+        poly: [[806, 384], [890, 426], [890, 484], [806, 526], [724, 484], [724, 426]],
+        center: [806, 466],
+        zoomOrigin: { x: 48.2, y: 48.4 }
+      },
       number: "03",
       cote: "BOX-03",
       title: "Ce qui se vit réellement : Présupposé & Dissonance",
@@ -332,7 +346,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-04",
-      habboCoords: { x: 49.3, y: 55.2, width: 4.8, height: 6.2 },
+      isoBox: {
+        poly: [[843, 508], [900, 537], [900, 584], [843, 613], [787, 584], [787, 537]],
+        center: [843, 565],
+        zoomOrigin: { x: 50.4, y: 59.5 }
+      },
       number: "04",
       cote: "BOX-04",
       title: "Diagnostic sur la Grille OCAI (Cameron & Quinn)",
@@ -420,7 +438,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-05",
-      habboCoords: { x: 63.1, y: 32.4, width: 5.2, height: 6.5 },
+      isoBox: {
+        poly: [[1076, 276], [1138, 307], [1138, 356], [1076, 386], [1014, 356], [1014, 307]],
+        center: [1076, 336],
+        zoomOrigin: { x: 64.4, y: 35.2 }
+      },
       number: "05",
       cote: "BOX-05",
       title: "Rapport à la Compétition : Chrono & Hypercompétition",
@@ -491,7 +513,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-06",
-      habboCoords: { x: 53.2, y: 83.9, width: 6.0, height: 7.5 },
+      isoBox: {
+        poly: [[886, 746], [952, 779], [952, 840], [886, 874], [820, 840], [820, 779]],
+        center: [886, 812],
+        zoomOrigin: { x: 53.0, y: 86.1 }
+      },
       number: "06",
       cote: "BOX-06",
       title: "L'Intrapreneuriat : Diagnostic & X-Arch Lab",
@@ -565,7 +591,11 @@ window.XELIANS_DATA = {
 
     {
       id: "box-07",
-      habboCoords: { x: 69.4, y: 79.7, width: 6.0, height: 7.5 },
+      isoBox: {
+        poly: [[1160, 706], [1228, 740], [1228, 794], [1160, 828], [1092, 794], [1092, 740]],
+        center: [1160, 772],
+        zoomOrigin: { x: 69.4, y: 81.5 }
+      },
       number: "07",
       cote: "BOX-07",
       title: "Bilan Critique & Perspectives Stratégiques",
